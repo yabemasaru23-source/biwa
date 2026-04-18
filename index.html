@@ -1725,6 +1725,80 @@
             .photo-strip-title br { display: none; }
         }
 
+
+        /* ===== BIWA2 PHOTO SECTION ===== */
+        .biwa2-section {
+            background: var(--cream);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .biwa2-inner {
+            position: relative;
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        .biwa2-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: center 40%;
+            display: block;
+            filter: contrast(1.04) saturate(1.06);
+            transition: transform 1s ease;
+        }
+
+        .biwa2-section:hover .biwa2-img {
+            transform: scale(1.03);
+        }
+
+        .biwa2-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 40%,
+                rgba(26, 20, 10, 0.72) 100%
+            );
+        }
+
+        .biwa2-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 48px;
+            display: flex;
+            align-items: flex-end;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .biwa2-caption-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--biwa-warm);
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .biwa2-caption-text {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(15px, 1.8vw, 20px);
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .biwa2-img { height: 300px; }
+            .biwa2-caption { flex-direction: column; align-items: flex-start; gap: 8px; padding: 24px 20px; }
+            .biwa2-caption-text { font-size: 14px; }
+        }
+
         /* ===== MODAL / DRAWER ===== */
         .modal-overlay {
             position: fixed;
@@ -2906,6 +2980,25 @@
         </div>
     </div>
 </section>
+
+<!-- ===== BIWA02 PHOTO ===== -->
+<div class="biwa2-section fade-in">
+    <div class="biwa2-inner">
+        <div class="biwa2-img-wrap">
+            <img
+                src="biwa02.jpeg"
+                alt="出島福祉村 びわ農場での収穫作業 — 障がいをもつ方々が生き生きと働く"
+                class="biwa2-img"
+                onerror="this.closest('.biwa2-section').style.display='none'"
+            >
+            <div class="biwa2-img-overlay"></div>
+        </div>
+        <div class="biwa2-caption">
+            <span class="biwa2-caption-label">農福連携の現場から</span>
+            <p class="biwa2-caption-text">長崎の豊かな自然の中、障がいをもつ方々がびわの収穫・加工に誇りをもって携わっています。「本物の仕事」が、人の尊厳を守る。</p>
+        </div>
+    </div>
+</div>
 
 <!-- ===== FAQ ===== -->
 <section class="faq-section" aria-labelledby="faq-heading">
