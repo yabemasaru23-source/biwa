@@ -289,14 +289,16 @@
         .hero-headline {
             font-family: 'Shippori Mincho', serif;
             font-weight: 800;
-            font-size: clamp(52px, 8vw, 96px);
-            line-height: 1.15;
+            font-size: clamp(40px, 8vw, 96px);
+            line-height: 1.2;
             color: var(--ink);
             margin-bottom: 24px;
             max-width: 800px;
             opacity: 0;
             transform: translateY(30px);
             animation: reveal 1s ease forwards 0.4s;
+            overflow-wrap: break-word;
+            word-break: keep-all;
         }
 
         .hero-headline .accent {
@@ -486,11 +488,13 @@
 
         .section-title {
             font-family: 'Shippori Mincho', serif;
-            font-size: clamp(32px, 4vw, 52px);
+            font-size: clamp(26px, 4vw, 52px);
             font-weight: 700;
-            line-height: 1.3;
+            line-height: 1.35;
             color: var(--ink);
             margin-bottom: 20px;
+            overflow-wrap: break-word;
+            word-break: keep-all;
         }
 
         .section-divider {
@@ -1484,14 +1488,241 @@
         }
 
         @media (max-width: 768px) {
-            section { padding: 80px 0; }
+            section { padding: 64px 0; }
             nav { display: none; }
-            .hero-stats { gap: 24px; }
+            .header-inner { padding: 0 16px; }
+
+            /* Hero - mobile */
+            .hero-inner { padding: 60px 16px 80px; }
+            .hero-badge { font-size: 11px; padding: 6px 14px; }
+            .hero-headline { font-size: clamp(40px, 11vw, 56px); line-height: 1.2; }
+            .hero-headline br { display: none; }
+            .hero-subline { font-size: 16px; line-height: 1.8; }
+            .hero-subline br { display: none; }
+            .hero-ctas { flex-direction: column; gap: 12px; }
+            .btn-primary, .btn-secondary { justify-content: center; width: 100%; padding: 16px 24px; font-size: 16px; }
+            .hero-stats { gap: 20px; flex-wrap: wrap; }
             .stat-divider { display: none; }
-            .hero-ctas { flex-direction: column; }
-            .btn-primary, .btn-secondary { justify-content: center; }
+            .stat-num { font-size: 32px; }
+
+            /* Section inner padding */
+            .section-inner { padding: 0 16px; }
+            .section-title { font-size: clamp(24px, 7vw, 36px); }
+
+            /* Problem section */
+            .quote-big { font-size: clamp(22px, 6.5vw, 32px); padding-left: 20px; }
+            .quote-big br { display: none; }
+            .problem-cards { grid-template-columns: 1fr; }
+            .problem-card { padding: 32px 24px; }
+
+            /* Solution */
+            .model-grid { grid-template-columns: 1fr; }
+            .model-card { padding: 36px 24px; }
+
+            /* Founder */
+            .founder-layout { grid-template-columns: 1fr; gap: 36px; }
+            .founder-image-frame img { height: 320px; object-position: center 20%; }
+            .founder-blockquote { font-size: clamp(20px, 6vw, 28px); }
+            .founder-blockquote br { display: none; }
+            .founder-content { padding-top: 0; }
+            .founder-text { font-size: 15px; }
+
+            /* Story */
+            .story-block { grid-template-columns: 1fr; gap: 28px; padding: 28px 20px; margin-bottom: 48px; }
+            .story-block-reverse .story-illustration { order: 0; }
+            .story-block-reverse .story-text { order: 1; }
+            .story-scene-title { font-size: clamp(18px, 5.5vw, 24px); }
+            .story-body p { font-size: 15px; }
+            .story-highlight { font-size: 15px !important; padding: 16px 18px !important; }
+            .story-closing { padding: 48px 20px; }
+            .story-closing-text { font-size: clamp(18px, 5.5vw, 24px); }
+            .story-closing-text br { display: none; }
+
+            /* Roadmap */
+            .timeline::before { left: 20px; }
+            .timeline-item { gap: 24px; }
+            .timeline-dot { width: 40px; height: 40px; font-size: 13px; }
+            .timeline-content { padding: 24px 20px; }
+
+            /* Trust */
+            .trust-grid { grid-template-columns: 1fr; }
+            .trust-item { padding: 28px 20px; }
+
+            /* Donate */
+            .plans-grid { grid-template-columns: 1fr; }
+            .plan-card { padding: 36px 24px; }
+
+            /* Form */
             .form-row { grid-template-columns: 1fr; }
+            .form-wrap { padding: 0; }
+            .form-submit-btn { padding: 18px 32px; font-size: 16px; width: 100%; justify-content: center; }
+
+            /* Footer */
+            .footer-top { grid-template-columns: 1fr; gap: 36px; }
+            .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .footer-inner { padding: 0 16px; }
+
+            /* Fixed CTA */
+            .fixed-cta { padding: 12px 16px; }
             .fixed-cta-text { display: none; }
+            .fixed-cta .btn-primary { width: 100%; justify-content: center; padding: 14px 20px; font-size: 15px; }
+
+            /* Donate transparency box */
+            .donate-section .fade-in[style*="flex"] { flex-direction: column; padding: 28px 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-headline { font-size: 38px; }
+            .hero-stats { gap: 14px; }
+            .stat-num { font-size: 28px; }
+            .ticker-track { animation-duration: 20s; }
+            .story-closing-photo { width: 130px; height: 130px; }
+            .story-closing-photo img { width: 130px; height: 130px; }
+        }
+
+
+        /* ===== INLINE PHOTO BLOCK (problem section) ===== */
+        .inline-photo-block {
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+            margin-bottom: 64px;
+        }
+
+        .inline-photo-wrap {
+            flex-shrink: 0;
+        }
+
+        .inline-photo-wrap.inline-photo-right {
+            order: 2;
+        }
+
+        .inline-photo-img {
+            width: 260px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 4px;
+            display: block;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+            border: 2px solid rgba(200,134,10,0.25);
+            filter: contrast(1.04) saturate(0.95);
+        }
+
+        .inline-photo-cap {
+            margin-top: 12px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+            text-align: center;
+            max-width: 260px;
+        }
+
+        .inline-photo-cap strong {
+            color: rgba(255,255,255,0.75);
+            font-weight: 600;
+        }
+
+        /* ===== PHOTO STRIP (between solution & founder) ===== */
+        .photo-strip {
+            background: var(--nagasaki-deep);
+            overflow: hidden;
+        }
+
+        .photo-strip-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 480px;
+        }
+
+        .photo-strip-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-strip-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.8s ease;
+            filter: contrast(1.05) saturate(1.05);
+        }
+
+        .photo-strip:hover .photo-strip-img {
+            transform: scale(1.04);
+        }
+
+        .photo-strip-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to right,
+                transparent 60%,
+                var(--nagasaki-deep) 100%
+            );
+        }
+
+        .photo-strip-text {
+            padding: 64px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .photo-strip-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--biwa-warm);
+            margin-bottom: 20px;
+        }
+
+        .photo-strip-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(20px, 2.5vw, 30px);
+            font-weight: 700;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .photo-strip-title br { }
+
+        .photo-strip-body {
+            font-size: 15px;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.9;
+        }
+
+        @media (max-width: 768px) {
+            /* Inline photo block - stack on mobile */
+            .inline-photo-block {
+                flex-direction: column;
+                gap: 28px;
+            }
+            .inline-photo-wrap.inline-photo-right { order: 0; }
+            .inline-photo-img { width: 100%; height: 240px; max-width: 100%; }
+            .inline-photo-cap { max-width: 100%; }
+
+            /* Photo strip - stack on mobile */
+            .photo-strip-inner {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .photo-strip-img-wrap { height: 260px; }
+            .photo-strip-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    var(--nagasaki-deep) 100%
+                );
+            }
+            .photo-strip-text { padding: 36px 20px 48px; }
+            .photo-strip-title { font-size: clamp(18px, 5.5vw, 24px); }
+            .photo-strip-title br { display: none; }
         }
 
         /* ===== MODAL / DRAWER ===== */
@@ -1742,6 +1973,52 @@
             position: relative;
         }
 
+        /* Story closing photo */
+        .story-closing-photo {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 44px;
+        }
+
+        .story-closing-photo img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 4px solid rgba(200, 134, 10, 0.6);
+            box-shadow: 0 0 0 8px rgba(200, 134, 10, 0.12), 0 16px 48px rgba(0,0,0,0.4);
+            display: block;
+            filter: contrast(1.05) saturate(1.1);
+        }
+
+        .story-closing-photo-caption {
+            position: absolute;
+            bottom: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .story-closing-photo-caption span {
+            font-size: 11px;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 0.12em;
+        }
+
+        .story-closing-photo-caption strong {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 600;
+        }
+
         @media (max-width: 900px) {
             .story-block {
                 grid-template-columns: 1fr;
@@ -1788,15 +2065,13 @@
         </div>
         
         <h1 class="hero-headline font-serif">
-            「親亡き後」の<br>
-            不安を、<span class="accent">日本から</span><br>
+            「親亡き後」の
+            不安を、<span class="accent">日本から</span>
             なくす。
         </h1>
         
         <p class="hero-subline">
-            行政だけに依存しない。<br>
-            社会全体で、障がいをもつ人の一生を支えるモデルを、<br>
-            長崎から全国へ広げていく。
+            行政だけに依存しない。社会全体で、障がいをもつ人の一生を支えるモデルを、長崎から全国へ広げていく。
         </p>
         
         <div class="hero-ctas">
@@ -1859,17 +2134,29 @@
         
         <div class="fade-in">
             <span class="section-label" style="color: var(--biwa-warm);">THE PROBLEM</span>
-            <h2 class="section-title" id="problem-heading">誰もが直面する、<br>しかし誰にも見えていない問題。</h2>
+            <h2 class="section-title" id="problem-heading">誰もが直面する、しかし誰にも見えていない問題。</h2>
             <div class="section-divider" style="background: linear-gradient(90deg, var(--biwa-warm), transparent);"></div>
         </div>
         
         <div class="quote-big fade-in">
-            私たちが死んだ後、<br>この子はどうやって<br>生きていったらいいんでしょうか…？
+            私たちが死んだ後、この子はどうやって生きていったらいいんでしょうか…？
         </div>
-        
-        <p class="section-body fade-in" style="color: rgba(255,255,255,0.7); margin-bottom: 64px; max-width: 760px; font-size: 18px; line-height: 2;">
-            これは、出島福祉村の理事長・池田賢一が24年の支援の中で、何度も直接聞いてきた言葉です。行政の支援制度はある。福祉法人も努力している。それでも、この根本的な不安は解消されないまま、今日も全国の何万家族が抱え続けています。
-        </p>
+
+        <!-- ikeda01 photo: placed in problem section for emotional impact -->
+        <div class="inline-photo-block fade-in">
+            <div class="inline-photo-wrap inline-photo-right">
+                <img
+                    src="ikeda01.jpg"
+                    alt="池田賢一理事長 —— 24年間、障がいをもつ方々と向き合ってきた"
+                    class="inline-photo-img"
+                    onerror="this.closest('.inline-photo-wrap').style.display='none'"
+                >
+                <p class="inline-photo-cap">24年間、ご家族の言葉と向き合ってきた<br><strong>池田 賢一 理事長</strong></p>
+            </div>
+            <p class="section-body" style="color: rgba(255,255,255,0.7); font-size: 18px; line-height: 2;">
+                これは、出島福祉村の理事長・池田賢一が24年の支援の中で、何度も直接聞いてきた言葉です。行政の支援制度はある。福祉法人も努力している。それでも、この根本的な不安は解消されないまま、今日も全国の何万家族が抱え続けています。
+            </p>
+        </div>
         
         <div class="problem-cards fade-in">
             <div class="problem-card">
@@ -1904,7 +2191,7 @@
     <div class="section-inner">
         <div class="fade-in" style="max-width: 680px; margin-bottom: 16px;">
             <span class="section-label">OUR SOLUTION</span>
-            <h2 class="section-title" id="solution-heading">安心を創る、<br>「長崎モデル」の3本柱。</h2>
+            <h2 class="section-title" id="solution-heading">安心を創る、「長崎モデル」の3本柱。</h2>
             <div class="section-divider"></div>
             <p class="section-body">びわから基金は「住まい」「専門家支援」「つながり」の三位一体で、障がいをもつ方の生涯にわたる安心インフラを構築します。</p>
         </div>
@@ -1947,6 +2234,26 @@
     </div>
 </section>
 
+<!-- ===== BIWA FARM PHOTO STRIP ===== -->
+<div class="photo-strip fade-in" aria-label="びわ農場の写真">
+    <div class="photo-strip-inner">
+        <div class="photo-strip-img-wrap">
+            <img
+                src="biwa01.jpeg"
+                alt="出島福祉村のびわ農場 — 農福連携でびわ茶・びわジャムを生産"
+                class="photo-strip-img"
+                onerror="this.closest('.photo-strip').style.display='none'"
+            >
+            <div class="photo-strip-overlay"></div>
+        </div>
+        <div class="photo-strip-text">
+            <span class="photo-strip-label">NOFUKU AWARD 2022 優秀賞</span>
+            <h3 class="photo-strip-title">「同情で買ってもらうんやない。<br>本当に美味しくて、価値のある<br>びわ茶を作るんや。」</h3>
+            <p class="photo-strip-body">600の農地を活用し、障がいをもつ方が本物の誇りを持てる仕事を。九州大学との産学連携で品質を科学的に証明した「びわ茶」は、農福連携の新しいモデルケースとして全国から注目されています。</p>
+        </div>
+    </div>
+</div>
+
 <!-- ===== FOUNDER ===== -->
 <section class="founder-section" id="founder" aria-labelledby="founder-heading">
     <div class="section-inner">
@@ -1972,8 +2279,7 @@
             <div class="founder-content fade-in">
                 <span class="section-label">MESSAGE FROM FOUNDER</span>
                 <h2 class="founder-blockquote" id="founder-heading">
-                    行政が届かない「安心」を、<br>
-                    1万人で建てる。
+                    行政が届かない「安心」を、1万人で建てる。
                 </h2>
                 <div class="section-divider"></div>
                 
@@ -2296,11 +2602,24 @@
 
         <!-- Closing statement -->
         <div class="story-closing fade-in">
+            <div class="story-closing-photo">
+                <img
+                    src="ikeda02.jpg"
+                    alt="びわ畑に立つ池田賢一理事長"
+                    onerror="this.style.display='none'"
+                >
+                <div class="story-closing-photo-caption">
+                    <span>びわ畑にて</span>
+                    <strong>池田 賢一</strong>
+                </div>
+            </div>
             <p class="story-closing-text">
-                あの父が、膝の痛みをこらえながら守り続けた息子の笑顔を。<br>
-                社会全体で、引き継いでいきたい。
+                あの父が、膝の痛みをこらえながら守り続けた息子の笑顔を。社会全体で、引き継いでいきたい。
             </p>
-            <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 40px; font-size: 16px; padding: 18px 48px;">
+            <p style="color: rgba(255,255,255,0.55); font-size: 15px; margin-top: 20px; font-family: 'Shippori Mincho', serif;">
+                — 出島福祉村 理事長　池田 賢一
+            </p>
+            <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 44px; font-size: 16px; padding: 18px 48px;">
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                 その笑顔を支える、1万人の応援団へ
             </a>
@@ -2314,7 +2633,7 @@
     <div class="section-inner">
         <div class="fade-in" style="max-width: 680px; margin-bottom: 0;">
             <span class="section-label">ROADMAP</span>
-            <h2 class="section-title" id="roadmap-heading">3年間で、<br>長崎から日本を変える。</h2>
+            <h2 class="section-title" id="roadmap-heading">3年間で、長崎から日本を変える。</h2>
             <div class="section-divider"></div>
             <p class="section-body">皆様からの支援を基に、段階的かつ確実に「長崎モデル」を構築・拡張していきます。</p>
         </div>
