@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -6,7 +7,7 @@
     
     <!-- SEO Meta Tags -->
     <title>びわから基金｜「親亡き後」の不安を、日本からなくす長崎モデル1万人拡張戦略</title>
-    <meta name="description" content="社会全体で障がいをもつ方の一生を支える「長崎モデル」。グループホームと専門家ネットワークで、親亡き後の不安をゼロに。出島福祉村が挑む1万人賛同プロジェクト。月1,000円から参加できます。">
+    <meta name="description" content="一級建築士の知見で設計するグループホームと弁護士・医師の専門家ネットワーク。親亡き後も障がいをもつ方が安心して暮らせる住まいと生きがいを。長崎から全国へ広がる新しい福祉モデル。月1,500円から参加できます。">
     <meta name="keywords" content="びわから基金,出島福祉村,親亡き後,障がい者支援,グループホーム,長崎,社会福祉,寄付,池田賢一">
     <meta name="author" content="社会福祉法人 出島福祉村">
     <meta name="robots" content="index, follow">
@@ -15,11 +16,11 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="びわから基金｜「親亡き後」の不安を、日本からなくす">
-    <meta property="og:description" content="社会全体で一生を支える「長崎モデル」。1万人の応援団を募集中。月1,000円から参加できます。">
+    <meta property="og:description" content="社会全体で一生を支える「長崎モデル」。1万人の応援団を募集中。月1,500円から参加できます。">
     <meta property="og:url" content="https://dejimafukushimura.or.jp/biwakara/">
     <meta property="og:site_name" content="びわから基金">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://dejimafukushimura.or.jp/biwakara/ogp.jpg">
+    <meta property="og:image" content="https://dejimafukushimura.or.jp/biwakara/ikeda02.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="びわから基金｜「親亡き後」の不安を、日本からなくす">
     <meta name="twitter:description" content="社会全体で一生を支える「長崎モデル」。1万人の応援団を募集中。">
@@ -41,28 +42,52 @@
 
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "びわから基金",
-      "alternateName": "出島福祉村応援団 びわから基金",
-      "url": "https://dejimafukushimura.or.jp/biwakara/",
-      "description": "障がいをもつ方の「親亡き後」問題を解決するため、社会全体で支える「長崎モデル」を構築するための基金",
-      "founder": {
-        "@type": "Person",
-        "name": "池田 賢一"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "びわから基金",
+        "alternateName": ["出島福祉村応援団 びわから基金", "Biwakara Fund"],
+        "url": "https://dejimafukushimura.or.jp/biwakara/",
+        "logo": "https://dejimafukushimura.or.jp/biwakara/ogp.jpg",
+        "description": "障がいをもつ方の親亡き後問題を解決するため一級建築士・池田賢一理事長が主導する長崎発の福祉基金。グループホーム建設・専門家ネットワーク・農福連携びわジャム事業で生涯の安心を提供。",
+        "foundingDate": "2026",
+        "founder": {
+          "@type": "Person",
+          "name": "池田 賢一",
+          "jobTitle": "理事長・一級建築士",
+          "worksFor": {"@type": "Organization", "name": "社会福祉法人 出島福祉村"}
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "社会福祉法人 出島福祉村",
+          "foundingDate": "2001",
+          "telephone": "095-842-8222",
+          "faxNumber": "095-842-8230",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "宮崎町",
+            "addressLocality": "長崎市",
+            "addressRegion": "長崎県",
+            "postalCode": "852-8016",
+            "addressCountry": "JP"
+          },
+          "url": "https://dejimafukushimura.or.jp"
+        },
+        "areaServed": {"@type": "Country", "name": "日本"},
+        "knowsAbout": ["障がい者支援", "グループホーム", "農福連携", "親亡き後問題", "法定後見"],
+        "award": "ノウフクアワード2022優秀賞"
       },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "社会福祉法人 出島福祉村",
-        "telephone": "095-842-8222",
-        "address": {
-          "@type": "PostalAddress",
-          "addressRegion": "長崎県",
-          "addressCountry": "JP"
-        }
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://dejimafukushimura.or.jp/biwakara/"},
+          {"@type": "ListItem", "position": 2, "name": "基金について", "item": "https://dejimafukushimura.or.jp/biwakara/#about"},
+          {"@type": "ListItem", "position": 3, "name": "賛同申込", "item": "https://dejimafukushimura.or.jp/biwakara/#join"}
+        ]
       }
-    }
+    ]
     </script>
 
     <style>
@@ -93,12 +118,19 @@
             scroll-behavior: smooth;
         }
 
+        *, *::before, *::after { box-sizing: border-box; }
         body {
             background: var(--ivory);
             color: var(--ink);
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.8;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+        img, video, iframe, svg {
+            max-width: 100%;
+            height: auto;
         }
 
         /* ===== TYPOGRAPHY ===== */
@@ -252,11 +284,12 @@
         }
 
         .hero-inner {
-            max-width: 1200px;
+            max-width: min(1200px, 100%);
             margin: 0 auto;
             padding: 80px 24px 100px;
             position: relative;
             z-index: 1;
+            overflow-x: hidden;
         }
 
         .hero-badge {
@@ -472,9 +505,10 @@
         }
 
         .section-inner {
-            max-width: 1200px;
+            max-width: min(1200px, 100%);
             margin: 0 auto;
             padding: 0 24px;
+            overflow-x: hidden;
         }
 
         .section-label {
@@ -1582,6 +1616,164 @@
         }
 
 
+
+        /* ===== HERO ORIGIN (名前の由来) ===== */
+        .hero-origin {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(200,134,10,0.08);
+            border: 1px solid rgba(200,134,10,0.2);
+            border-radius: 4px;
+            padding: 14px 20px;
+            margin-bottom: 36px;
+            font-size: 14px;
+            color: var(--ink-mid);
+            line-height: 1.7;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: reveal 0.8s ease forwards 0.35s;
+        }
+        .hero-origin-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--biwa-gold);
+            background: rgba(200,134,10,0.12);
+            padding: 2px 8px;
+            border-radius: 2px;
+            white-space: nowrap;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .sp-hide { }
+
+        /* ===== DIFF BANNER (差別化ポイント) ===== */
+        .diff-banner {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 0;
+            background: var(--nagasaki-deep);
+            border-radius: 8px;
+            margin-top: 56px;
+            overflow: hidden;
+        }
+        .diff-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 36px 32px;
+        }
+        .diff-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.08);
+            margin: 24px 0;
+        }
+        .diff-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            color: var(--biwa-warm);
+            opacity: 0.9;
+        }
+        .diff-icon svg { width: 100%; height: 100%; }
+        .diff-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .diff-body {
+            font-size: 13px;
+            color: rgba(255,255,255,0.62);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .diff-banner {
+                grid-template-columns: 1fr;
+            }
+            .diff-divider {
+                width: 100%;
+                height: 1px;
+                margin: 0 24px;
+                width: calc(100% - 48px);
+            }
+            .diff-item { padding: 28px 24px; }
+            .hero-origin { font-size: 13px; }
+            .sp-hide { display: none; }
+        }
+
+
+        /* ===== VS BOX (現状 vs 長崎モデル) ===== */
+        .vs-box {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 0;
+            margin-bottom: 0;
+            align-items: center;
+        }
+        .vs-col {
+            padding: 36px 32px;
+            border-radius: 6px;
+        }
+        .vs-bad {
+            background: rgba(192, 57, 43, 0.12);
+            border: 1px solid rgba(192, 57, 43, 0.25);
+        }
+        .vs-good {
+            background: rgba(46, 94, 64, 0.18);
+            border: 1px solid rgba(46, 94, 64, 0.35);
+        }
+        .vs-label {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: rgba(192,57,43,0.9);
+            margin-bottom: 16px;
+        }
+        .vs-label.nagasaki { color: var(--nagasaki-light); }
+        .vs-list {
+            list-style: none;
+            padding: 0;
+        }
+        .vs-list li {
+            font-size: 14px;
+            color: rgba(255,255,255,0.72);
+            padding: 6px 0 6px 20px;
+            position: relative;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .vs-bad .vs-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: rgba(192,57,43,0.8);
+        }
+        .vs-good .vs-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--nagasaki-light);
+        }
+        .vs-arrow {
+            font-size: 32px;
+            color: var(--biwa-warm);
+            padding: 0 20px;
+            font-weight: 700;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .vs-box { grid-template-columns: 1fr; gap: 12px; }
+            .vs-arrow { text-align: center; transform: rotate(90deg); padding: 8px 0; }
+            .vs-col { padding: 24px 20px; }
+        }
+
         /* ===== INLINE PHOTO BLOCK (problem section) ===== */
         .inline-photo-block {
             display: flex;
@@ -2104,6 +2296,377 @@
             .story-block-reverse .story-text { order: 1; }
             .story-closing { padding: 48px 24px; }
         }
+
+        /* ===== ORIGIN SECTION ===== */
+        .origin-section {
+            background: var(--cream);
+            padding: 100px 0;
+        }
+        .origin-layout {
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            gap: 72px;
+            align-items: center;
+        }
+        .origin-body {
+            font-size: 17px;
+            line-height: 2;
+            color: var(--ink-mid);
+        }
+        .origin-body strong { color: var(--biwa-gold); font-weight: 700; }
+        .origin-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+        .origin-tag {
+            background: white;
+            border: 1px solid rgba(200,134,10,0.25);
+            color: var(--ink-mid);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.03em;
+        }
+        .origin-image-wrap {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(26,20,10,0.14);
+        }
+        .origin-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.1) contrast(1.04);
+        }
+        .origin-img-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--biwa-gold), var(--biwa-warm));
+            color: white;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 4px;
+            line-height: 1.6;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(200,134,10,0.4);
+        }
+        @media (max-width: 900px) {
+            .origin-layout { grid-template-columns: 1fr; gap: 36px; }
+            .origin-img { height: 260px; }
+        }
+
+        /* ===== DIFFERENTIATION SECTION ===== */
+        .diff-section {
+            background: white;
+            padding: 100px 0;
+        }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .diff-card {
+            background: var(--cream);
+            border: 1px solid rgba(200,134,10,0.1);
+            border-radius: 4px;
+            padding: 40px 32px;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .diff-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 48px rgba(26,20,10,0.09);
+        }
+        .diff-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--biwa-gold), var(--biwa-warm));
+            border-radius: 4px 4px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+        .diff-card:hover::before { transform: scaleX(1); }
+        .diff-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .diff-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .diff-body {
+            font-size: 14px;
+            color: var(--ink-light);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+        .diff-point {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--biwa-gold);
+            background: rgba(200,134,10,0.08);
+            border-left: 3px solid var(--biwa-gold);
+            padding: 10px 14px;
+            border-radius: 0 4px 4px 0;
+        }
+        @media (max-width: 900px) {
+            .diff-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== MEMBER CTA BOX ===== */
+        .member-cta-box {
+            margin-bottom: 52px;
+        }
+        .member-cta-inner {
+            background: linear-gradient(135deg, var(--nagasaki-deep), #0F2418);
+            border-radius: 8px;
+            padding: 40px 48px;
+            text-align: center;
+        }
+        .member-cta-lead {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(17px, 2.5vw, 22px);
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .member-cta-lead strong {
+            color: var(--biwa-warm);
+        }
+        .member-steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .member-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 4px;
+            padding: 20px 24px;
+            min-width: 160px;
+        }
+        .member-step-num {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--biwa-warm);
+            line-height: 1;
+        }
+        .member-step-text {
+            font-size: 13px;
+            color: rgba(255,255,255,0.75);
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .member-step-arrow {
+            font-size: 24px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 300;
+        }
+        @media (max-width: 768px) {
+            .member-cta-inner { padding: 28px 20px; }
+            .member-steps { flex-direction: column; }
+            .member-step-arrow { transform: rotate(90deg); }
+            .member-step { min-width: 200px; width: 100%; max-width: 280px; }
+        }
+
+        /* ===== RESPONSIVE: 横スクロール防止・画像リサイズ ===== */
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .section-inner { padding: 0 16px; }
+            table { width: 100%; display: block; overflow-x: auto; }
+        }
+
+
+        /* ===== PHOTO GALLERY ===== */
+        .gallery-section {
+            background: var(--ink);
+            padding: 100px 0 80px;
+            overflow: hidden;
+        }
+        .gallery-section .section-title { color: white; }
+        .gallery-section .section-label { color: var(--biwa-warm); }
+
+        /* 横スクロールトラック */
+        .gallery-scroll-wrap {
+            overflow: hidden;
+            margin-top: 56px;
+            position: relative;
+        }
+        .gallery-scroll-wrap::before,
+        .gallery-scroll-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .gallery-scroll-wrap::before {
+            left: 0;
+            background: linear-gradient(to right, var(--ink), transparent);
+        }
+        .gallery-scroll-wrap::after {
+            right: 0;
+            background: linear-gradient(to left, var(--ink), transparent);
+        }
+
+        .gallery-track {
+            display: flex;
+            gap: 20px;
+            animation: galleryScroll 28s linear infinite;
+            width: max-content;
+        }
+        .gallery-track:hover { animation-play-state: paused; }
+
+        @keyframes galleryScroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        .gallery-item {
+            flex-shrink: 0;
+            width: 340px;
+            height: 240px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+            filter: brightness(0.92) saturate(1.05);
+        }
+        .gallery-item:hover img { transform: scale(1.07); }
+        .gallery-item-cap {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.72));
+            padding: 28px 18px 14px;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .gallery-item-cap { opacity: 1; }
+
+        /* 下から上がってくるグリッド */
+        .gallery-rise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 56px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 24px;
+        }
+        .gallery-rise-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .gallery-rise-item.risen {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gallery-rise-item:nth-child(1) { transition-delay: 0s; }
+        .gallery-rise-item:nth-child(2) { transition-delay: 0.12s; }
+        .gallery-rise-item:nth-child(3) { transition-delay: 0.24s; }
+        .gallery-rise-item:nth-child(4) { transition-delay: 0.36s; }
+
+        .gallery-rise-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.9) saturate(1.08);
+            transition: transform 0.5s ease, filter 0.4s;
+        }
+        .gallery-rise-item:hover img {
+            transform: scale(1.06);
+            filter: brightness(1) saturate(1.15);
+        }
+        .gallery-rise-cap {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(26,20,10,0.82));
+            padding: 32px 16px 14px;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+        .gallery-rise-tag {
+            display: inline-block;
+            background: var(--biwa-gold);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.1em;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 900px) {
+            .gallery-rise-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item { width: 260px; height: 190px; }
+        }
+        @media (max-width: 480px) {
+            .gallery-rise-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .gallery-item { width: 220px; height: 160px; }
+            .gallery-rise-item img { height: 160px; }
+        }
+
     </style>
 </head>
 <body>
@@ -2119,11 +2682,11 @@
             </div>
         </a>
         <nav>
-            <a href="#about">基金について</a>
-            <a href="#solution">解決策</a>
+            <a href="#origin">基金の由来</a>
+            <a href="#about">課題と解決策</a>
             <a href="#story">感動の物語</a>
             <a href="#founder">理事長の想い</a>
-            <a href="#roadmap">ロードマップ</a>
+            <a href="#join">会員登録</a>
             <a href="#join" class="nav-cta">今すぐ賛同する</a>
         </nav>
     </div>
@@ -2136,17 +2699,17 @@
     
     <div class="hero-inner">
         <div class="hero-badge">
-            社会全体で一生を支える「長崎モデル」1万人拡張戦略
+            長崎はびわの里 ── 社会全体で一生を支える「長崎モデル」1万人賛同プロジェクト
         </div>
         
-        <h1 class="hero-headline font-serif">
+        <h1 class="hero-headline font-serif" itemscope itemtype="https://schema.org/WebPage">
             「親亡き後」の
             不安を <span class="accent">日本から</span>
             なくす
         </h1>
         
         <p class="hero-subline">
-            行政だけに依存せず 社会全体で障がいをもつ人の一生を支えるモデルを長崎から全国へ広げていく
+            <strong style="color:var(--biwa-gold);">一級建築士の住まい設計力</strong>と<strong style="color:var(--nagasaki-mid);">専門家ネットワーク</strong>で<br class="hero-br">親亡き後の不安をゼロにする 長崎から全国へ
         </p>
         
         <div class="hero-ctas">
@@ -2177,7 +2740,7 @@
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <div class="stat-num"><span>1,000</span><span>円〜</span></div>
+                <div class="stat-num"><span>1,500</span><span>円〜</span></div>
                 <div class="stat-label">月額から参加できます</div>
             </div>
         </div>
@@ -2201,6 +2764,31 @@
         <span class="ticker-item"><span class="ticker-dot"></span>第三者監査による完全な透明性の確保</span>
     </div>
 </div>
+
+<!-- ===== BIWAKARA ORIGIN ===== -->
+<section class="origin-section" id="origin" aria-labelledby="origin-heading">
+    <div class="section-inner">
+        <div class="origin-layout fade-in">
+            <div class="origin-text">
+                <span class="section-label">NAME STORY</span>
+                <h2 class="section-title" id="origin-heading" style="font-size:clamp(24px,3.5vw,42px);">「びわから基金」の名前の由来</h2>
+                <div class="section-divider"></div>
+                <p class="origin-body">長崎県はびわの名産地として知られています 温暖な気候と豊かな土壌が育む長崎のびわは 甘みが強く全国でも高い評価を受けています</p>
+                <p class="origin-body" style="margin-top:16px;">「びわから」には<strong>「びわの恵みから 社会へ」</strong>という想いが込められています 障がいをもつ方々がびわ農園で丹精込めて作った「長崎びわジャム」と「びわ茶」 その誇りある仕事が この基金を支える大切な柱のひとつです</p>
+                <div class="origin-tags">
+                    <span class="origin-tag">🍊 長崎県産びわ</span>
+                    <span class="origin-tag">🌿 農福連携</span>
+                    <span class="origin-tag">🏆 ノウフクアワード2022優秀賞</span>
+                    <span class="origin-tag">🔬 九州大学との産学連携</span>
+                </div>
+            </div>
+            <div class="origin-image-wrap">
+                <img src="biwa01.jpeg" alt="長崎県産びわ農園 出島福祉村の農福連携" class="origin-img" onerror="this.closest('.origin-image-wrap').style.display='none'">
+                <div class="origin-img-badge">長崎びわの里から<br>生まれた基金</div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ===== PROBLEM SECTION ===== -->
 <section class="problem-section" id="about" aria-labelledby="problem-heading">
@@ -2252,8 +2840,27 @@
             </div>
         </div>
         
-        <div class="fade-in" style="background: rgba(200, 134, 10, 0.08); border: 1px solid rgba(200, 134, 10, 0.2); padding: 40px 48px; border-radius: 4px;">
-            <p style="color: rgba(255,255,255,0.85); font-size: 20px; font-family: 'Shippori Mincho', serif; font-weight: 600; line-height: 1.7;">
+        <div class="fade-in vs-box">
+            <div class="vs-col vs-bad">
+                <div class="vs-label">現状</div>
+                <ul class="vs-list">
+                    <li>何年も空きを待つ施設探し</li>
+                    <li>家族だけで複雑な法律・資産管理と格闘</li>
+                    <li>行政の縦割り対応による孤立</li>
+                </ul>
+            </div>
+            <div class="vs-arrow">→</div>
+            <div class="vs-col vs-good">
+                <div class="vs-label nagasaki">長崎モデル</div>
+                <ul class="vs-list">
+                    <li>基金主導で空き家を活用し施設を自ら創出</li>
+                    <li>ワンストップで専門家チームが相続・後見を代行</li>
+                    <li>生涯を通じた切れ目のないナビゲート</li>
+                </ul>
+            </div>
+        </div>
+        <div class="fade-in" style="background: rgba(200, 134, 10, 0.08); border: 1px solid rgba(200, 134, 10, 0.2); padding: 32px 40px; border-radius: 4px; margin-top: 24px;">
+            <p style="color: rgba(255,255,255,0.85); font-size: 19px; font-family: 'Shippori Mincho', serif; font-weight: 600; line-height: 1.7;">
                 行政だけで解決できる問題ではありません 社会全体が一人ひとりの一生に向き合う仕組みを作ることが必要です
             </p>
             <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 16px;">— 池田賢一（出島福祉村 理事長）</p>
@@ -2297,13 +2904,180 @@
             <div class="model-card fade-in">
                 <div class="model-num">03</div>
                 <h3 class="model-title">就労・生きがいの場<br><small style="font-size: 0.65em; color: var(--ink-light); font-weight: 500;">びわからワーク</small></h3>
-                <p class="model-body">農福連携によるびわ茶・びわジャムの生産販売 「同情で買ってもらうのではなく本当に価値のある商品を作る」という理念のもとびわジャム・びわ茶など本物の就労機会を創ります</p>
+                <p class="model-body">「かわいそうだから買う」ではなく「本当に美味しいから買いたい」 障がいをもつ方が誇りをもって手がけるびわジャム・びわ茶は九州大学との産学連携で品質を科学的に証明した本物のブランドです</p>
                 <ul class="model-list">
-                    <li>ノウフクアワード2022優秀賞受賞</li>
+                    <li>農福連携ノウフクアワード2022 <strong>優秀賞受賞</strong></li>
                     <li>九州大学との産学連携で品質を科学的に証明</li>
                     <li>個性を活かせる多様な仕事・職場づくり</li>
                     <li>収益は施設運営と福祉へ再投資</li>
                 </ul>
+            </div>
+        </div>
+
+            <!-- 差別化バナー -->
+            <div class="diff-banner fade-in">
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 40 40" fill="none"><path d="M8 34V18L20 8L32 18V34H24V24H16V34H8Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="diff-title">一級建築士の住まい専門性</div>
+                        <div class="diff-body">理事長・池田賢一は一級建築士 お子様の成長や状態に合わせた住まいを設計・提案できるのは建築と福祉 両方を知る私たちだけです</div>
+                    </div>
+                </div>
+                <div class="diff-divider"></div>
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M13 20h14M20 13v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="diff-title">弁護士・医師・税理士が連携</div>
+                        <div class="diff-body">法的後見・資産管理・医療まで出島福祉村が窓口を一本化 複数の専門家に個別に相談する必要がありません</div>
+                    </div>
+                </div>
+                <div class="diff-divider"></div>
+                <div class="diff-item">
+                    <div class="diff-icon">
+                        <svg viewBox="0 0 40 40" fill="none"><path d="M10 20h20M20 10l10 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div>
+                        <div class="diff-title">返礼品なし・100%事業投資</div>
+                        <div class="diff-body">理念共感型の基金です 返礼品コストを徹底削減し集まった支援をすべてGH建設と専門家ネットワークに投入します</div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+
+
+<!-- ===== DIFFERENTIATION ===== -->
+<section class="diff-section" id="difference" aria-labelledby="diff-heading">
+    <div class="section-inner">
+        <div class="fade-in" style="text-align:center; max-width:680px; margin:0 auto 60px;">
+            <span class="section-label">WHY US</span>
+            <h2 class="section-title" id="diff-heading">他の基金との決定的な違い</h2>
+            <div class="section-divider" style="margin:16px auto;"></div>
+            <p class="section-body">びわから基金にしかできない理由があります</p>
+        </div>
+        <div class="diff-grid">
+            <div class="diff-card fade-in">
+                <div class="diff-icon">🏗️</div>
+                <h3 class="diff-title">一級建築士による「住まいの専門性」</h3>
+                <p class="diff-body">理事長・池田賢一は一級建築士として50年のキャリアを持ちます お子様の年齢・障がいの状態・将来の変化に合わせた「成長する住まい」の設計が可能 幼少期から高齢期まで 本人が安心して暮らせる住環境を一貫してプロデュースします</p>
+                <div class="diff-point">他の福祉団体にはない「住まいの専門家」が基金を主導</div>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">⚖️</div>
+                <h3 class="diff-title">弁護士・医師・税理士が揃う専門家チーム</h3>
+                <p class="diff-body">法定後見 相続 資産管理 医療連携 ── 親亡き後に必要なすべての専門知識をワンストップで提供します 出島福祉村が窓口を一本化し ご家族が各専門家を個別に探す必要はありません</p>
+                <div class="diff-point">24年間で築いた専門家ネットワークを基金会員が活用できる</div>
+            </div>
+            <div class="diff-card fade-in">
+                <div class="diff-icon">💼</div>
+                <h3 class="diff-title">「かわいそう」ではなく「価値ある仕事」</h3>
+                <p class="diff-body">障がいをもつ方が作る長崎びわジャム・びわ茶は 同情で買ってもらう商品ではありません 九州大学との産学連携で品質を科学的に証明し ノウフクアワード2022優秀賞を受賞した「本物の商品」です 誇りをもって働ける仕事が 生きがいを創ります</p>
+                <div class="diff-point">収益は施設運営と福祉へ100%再投資</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== PHOTO GALLERY ===== -->
+<section class="gallery-section" aria-label="活動写真ギャラリー">
+    <div class="section-inner" style="text-align:center;">
+        <span class="section-label">OUR ACTIVITIES</span>
+        <h2 class="section-title" style="color:white; font-size:clamp(24px,3.5vw,42px);">生き生きと働く 誇りある現場</h2>
+        <div class="section-divider" style="margin:16px auto; background:linear-gradient(90deg,var(--biwa-warm),transparent);"></div>
+        <p style="color:rgba(255,255,255,0.65); font-size:17px; max-width:640px; margin:0 auto; line-height:1.9;">
+            障がいをもつ方々が本物の仕事に誇りをもって取り組む日々の現場です
+        </p>
+    </div>
+
+    <!-- 横スクロールギャラリー -->
+    <div class="gallery-scroll-wrap" style="margin-top:48px;">
+        <div class="gallery-track" id="gallery-track">
+            <div class="gallery-item">
+                <img src="work01.jpg" alt="びわ葉の加工作業 — 丁寧な手作業で品質を守る">
+                <div class="gallery-item-cap">びわ葉の丁寧な加工作業</div>
+            </div>
+            <div class="gallery-item">
+                <img src="jam01.jpg" alt="NAGASAKI YUMEBIWAジャムの瓶詰め — 誇りある商品">
+                <div class="gallery-item-cap">長崎びわジャムの瓶詰め</div>
+            </div>
+            <div class="gallery-item">
+                <img src="farm01.jpg" alt="農園での就労支援 — 生きがいを持てる仕事">
+                <div class="gallery-item-cap">農園での就労支援</div>
+            </div>
+            <div class="gallery-item">
+                <img src="facility01.jpg" alt="三和ゆめランド直売所 — 池田理事長が設計した施設">
+                <div class="gallery-item-cap">三和ゆめランド直売所</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ikeda02.jpg" alt="池田賢一理事長 — びわ畑にて">
+                <div class="gallery-item-cap">池田賢一理事長 びわ畑にて</div>
+            </div>
+            <div class="gallery-item">
+                <img src="biwa01.jpeg" alt="長崎のびわ農園">
+                <div class="gallery-item-cap">長崎のびわ農園</div>
+            </div>
+            <!-- 無限ループ用に複製 -->
+            <div class="gallery-item">
+                <img src="work01.jpg" alt="びわ葉の加工作業">
+                <div class="gallery-item-cap">びわ葉の丁寧な加工作業</div>
+            </div>
+            <div class="gallery-item">
+                <img src="jam01.jpg" alt="長崎びわジャムの瓶詰め">
+                <div class="gallery-item-cap">長崎びわジャムの瓶詰め</div>
+            </div>
+            <div class="gallery-item">
+                <img src="farm01.jpg" alt="農園での就労支援">
+                <div class="gallery-item-cap">農園での就労支援</div>
+            </div>
+            <div class="gallery-item">
+                <img src="facility01.jpg" alt="三和ゆめランド直売所">
+                <div class="gallery-item-cap">三和ゆめランド直売所</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ikeda02.jpg" alt="池田賢一理事長">
+                <div class="gallery-item-cap">池田賢一理事長 びわ畑にて</div>
+            </div>
+            <div class="gallery-item">
+                <img src="biwa01.jpeg" alt="長崎のびわ農園">
+                <div class="gallery-item-cap">長崎のびわ農園</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下から上がってくるグリッド -->
+    <div class="gallery-rise-grid" id="gallery-rise">
+        <div class="gallery-rise-item">
+            <img src="work01.jpg" alt="就労支援 びわ葉加工">
+            <div class="gallery-rise-cap">
+                <div class="gallery-rise-tag">就労支援</div>
+                <div>びわ葉を丁寧に一枚一枚処理</div>
+            </div>
+        </div>
+        <div class="gallery-rise-item">
+            <img src="jam01.jpg" alt="びわジャム商品">
+            <div class="gallery-rise-cap">
+                <div class="gallery-rise-tag">農福連携商品</div>
+                <div>NAGASAKI YUMEBIWA JAM</div>
+            </div>
+        </div>
+        <div class="gallery-rise-item">
+            <img src="farm01.jpg" alt="農園作業">
+            <div class="gallery-rise-cap">
+                <div class="gallery-rise-tag">農園就労</div>
+                <div>自然の中で生きがいをもって働く</div>
+            </div>
+        </div>
+        <div class="gallery-rise-item">
+            <img src="facility01.jpg" alt="施設外観">
+            <div class="gallery-rise-cap">
+                <div class="gallery-rise-tag">施設</div>
+                <div>三和ゆめランド直売所</div>
             </div>
         </div>
     </div>
@@ -2389,7 +3163,7 @@
 
         <div class="fade-in" style="text-align: center; max-width: 760px; margin: 0 auto 72px;">
             <span class="section-label">A TRUE STORY</span>
-            <h2 class="section-title" id="story-heading" style="font-size: clamp(28px, 4vw, 48px);">80年目の夏の決意</h2>
+            <h2 class="section-title" id="story-heading" style="font-size: clamp(28px, 4vw, 48px);">長崎に原爆が落ちて80年目の夏</h2>
             <div class="section-divider" style="margin: 16px auto;"></div>
             <p style="font-size: 17px; color: var(--ink-light); line-height: 1.9;">
                 これはある家族の実話です そしてびわから基金が生まれた原点の物語です
@@ -2512,12 +3286,12 @@
 
             <div class="story-text">
                 <div class="story-chapter">Scene 01</div>
-                <h3 class="story-scene-title">父が 80歳になった夏のことだった</h3>
+                <h3 class="story-scene-title">60歳後半を迎えたころのお話し</h3>
                 <div class="story-body">
-                    <p>重度の障がいをもつ息子を育ててもう50年以上が過ぎていた 毎朝息子を車椅子からそっと抱き上げ浴槽へ入れる それが彼らの家族の変わらぬ日常だった</p>
-                    <p>父親の手は年々細くなっていた それでも息子を支える腕は揺らがなかった 「この子が気持ちよさそうにしている顔を見ると疲れなんて吹き飛ぶんです」と父は言っていたという</p>
-                    <p>しかしその夏父は80歳になった 医者から膝の手術を勧められた 「手術すれば楽になる」と言われながら父は首を縦に振らなかった</p>
-                    <p class="story-highlight">「手術したら しばらく息子の入浴介助ができなくなる この子が一番嫌がることなんです だからまだ手術できない」</p>
+                    <p>重度の障がいをもつ息子を育てておよそ40年が過ぎていた 毎朝息子を車椅子から抱き上げ浴槽へ入れる それが変わらぬ日常だった</p>
+                    <p>「この子が気持ちよさそうにしている顔を見ると疲れなんて吹き飛ぶんです」 父は年齢を重ねても その言葉を変えなかった</p>
+                    <p>しかし父は60代後半になった 限界は近づいていた 医者から膝の手術を勧められた</p>
+                    <p class="story-highlight">「…できません 手術したら しばらく息子の入浴介助ができなくなる それができないのは 息子に申し訳ない」</p>
                 </div>
             </div>
         </div>
@@ -2813,7 +3587,7 @@
                 <div class="plan-amount">
                     <div class="plan-amount-from">月額</div>
                     <div>
-                        <span class="plan-amount-num">1,000</span>
+                        <span class="plan-amount-num">1,500</span>
                         <span class="plan-amount-unit">円〜</span>
                     </div>
                 </div>
@@ -2881,9 +3655,30 @@
 <section class="form-section" id="join" aria-labelledby="join-heading">
     <div class="section-inner">
         <div class="fade-in" style="text-align: center; margin-bottom: 16px;">
-            <span class="section-label">CONTACT & APPLY</span>
-            <h2 class="section-title" id="join-heading">賛同申込・お問い合わせ</h2>
+            <span class="section-label">MEMBER REGISTRATION</span>
+            <h2 class="section-title" id="join-heading">会員登録・賛同申込</h2>
             <div class="section-divider" style="margin: 16px auto 0;"></div>
+        </div>
+        <div class="member-cta-box fade-in">
+            <div class="member-cta-inner">
+                <p class="member-cta-lead">びわから基金は<strong>「理念への共感」で繋がる会員制コミュニティ</strong>です</p>
+                <div class="member-steps">
+                    <div class="member-step">
+                        <span class="member-step-num">01</span>
+                        <span class="member-step-text">下記フォームで賛同申込</span>
+                    </div>
+                    <div class="member-step-arrow">→</div>
+                    <div class="member-step">
+                        <span class="member-step-num">02</span>
+                        <span class="member-step-text">担当者より3営業日以内にご連絡</span>
+                    </div>
+                    <div class="member-step-arrow">→</div>
+                    <div class="member-step">
+                        <span class="member-step-num">03</span>
+                        <span class="member-step-text">お支払い方法をご案内・会員登録完了</span>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="form-wrap">
@@ -2919,7 +3714,7 @@
                         <label class="radio-item">
                             <input type="radio" name="type" value="monthly" required>
                             <div>
-                                <div class="radio-label">月額寄付（月1,000円〜）</div>
+                                <div class="radio-label">月額寄付（月1,500円〜）</div>
                             </div>
                             <span class="radio-desc">継続支援</span>
                         </label>
@@ -3062,7 +3857,47 @@
             </div>
         </div>
     </div>
-</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "月額寄付はいつでも解約できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい いつでも解約可能です 解約を希望される場合は事務局（担当：川原）までご連絡ください 電話：095-842-8222（平日9:00-17:00）"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "寄付金の税制上の優遇はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "社会福祉法人への寄付は所得税・法人税の税制上の優遇措置の対象となる場合があります 詳細はご担当者からの連絡時にご案内いたします"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "長崎在住でなくても参加できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "もちろんです 全国どこからでもご参加いただけます オンラインでの会議・報告会も実施予定です"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "寄付金はどのように使われますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GH整備40%・情報ネットワーク25%・運営費25%・準備金10%で配分します 返礼品コストを削減し事業への優先投入を徹底しています"
+      }
+    }
+  ]
+}
+</script>
 
 <!-- ===== FOOTER ===== -->
 <footer>
@@ -3086,8 +3921,9 @@
             <div>
                 <div class="footer-col-title">NAVIGATE</div>
                 <ul class="footer-links">
-                    <li><a href="#about">基金について</a></li>
-                    <li><a href="#solution">解決策・3本柱</a></li>
+                    <li><a href="#origin">びわから基金の由来</a></li>
+                    <li><a href="#about">課題と解決策</a></li>
+                    <li><a href="#difference">他基金との違い</a></li>
                     <li><a href="#founder">理事長の想い</a></li>
                     <li><a href="#roadmap">ロードマップ</a></li>
                     <li><a href="#donate">寄付プラン</a></li>
@@ -3124,7 +3960,7 @@
 <!-- ===== FIXED CTA BAR ===== -->
 <div class="fixed-cta" id="fixed-cta" role="complementary" aria-label="寄付申込み">
     <p class="fixed-cta-text">
-        <strong>「長崎モデル」1万人拡張戦略</strong> — 月1,000円から参加できます
+        <strong>「長崎モデル」1万人拡張戦略</strong> — 月1,500円から参加できます
     </p>
     <a href="#join" class="btn-primary" style="padding: 12px 28px; font-size: 15px;">今すぐ賛同する</a>
 </div>
@@ -3281,6 +4117,20 @@ function openModal(type) {
 // Duplicate ticker for seamless loop
 const ticker = document.getElementById('ticker');
 ticker.innerHTML += ticker.innerHTML;
+
+// ===== GALLERY RISE ANIMATION =====
+const riseObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('risen');
+        }
+    });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.gallery-rise-item').forEach(el => {
+    riseObserver.observe(el);
+});
+
 </script>
 
 </body>
