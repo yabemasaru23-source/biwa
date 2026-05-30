@@ -115,6 +115,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
@@ -125,7 +126,8 @@
             line-height: 1.8;
             overflow-x: hidden;
             width: 100%;
-            max-width: 100vw;
+            max-width: 100%;
+            position: relative;
         }
         img, video, iframe, svg {
             max-width: 100%;
@@ -474,6 +476,8 @@
             padding: 14px 0;
             overflow: hidden;
             position: relative;
+            width: 100%;
+            max-width: 100vw;
         }
 
         .ticker-track {
@@ -481,6 +485,7 @@
             gap: 80px;
             animation: ticker 30s linear infinite;
             white-space: nowrap;
+            width: max-content;
         }
 
         .ticker-item {
@@ -2699,8 +2704,8 @@
             min-width: 160px;
         }
         .network-hub {
-            background: var(--biwa-deep);
-            color: #fff;
+            background: #1A3A2A;
+            color: #FFFFFF !important;
             font-family: 'Shippori Mincho', serif;
             font-size: 15px;
             font-weight: 700;
@@ -2708,7 +2713,8 @@
             border-radius: 12px;
             text-align: center;
             line-height: 1.6;
-            box-shadow: 0 4px 18px rgba(30,60,30,0.18);
+            box-shadow: 0 4px 18px rgba(30,60,30,0.25);
+            min-width: 120px;
         }
         .network-note {
             background: #E8F0FF;
@@ -2772,6 +2778,83 @@
             border-radius: 4px;
             padding: 2px 8px;
             margin-bottom: 8px;
+        }
+
+        /* ===== 7つの鐘 BELL CARDS ===== */
+        .bell-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 8px;
+        }
+        /* 7枚目だけ中央に */
+        .bell-grid .bell-card:last-child {
+            grid-column: 2 / 3;
+        }
+        .bell-card {
+            background: #fff;
+            border: 1.5px solid #D4C9A8;
+            border-top: 4px solid #B8A87A;
+            border-radius: 12px;
+            padding: 28px 20px 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+            position: relative;
+        }
+        .bell-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+        }
+        .bell-card--accent {
+            border-top-color: #4A7CC7;
+            background: #F6F9FF;
+        }
+        .bell-number {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: #B8921E;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .bell-card--accent .bell-number {
+            color: #4A7CC7;
+        }
+        .bell-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            display: block;
+            line-height: 1;
+        }
+        .bell-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1A3A2A;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .bell-body {
+            font-size: 12.5px;
+            color: #5A4E40;
+            line-height: 1.8;
+        }
+        @media (max-width: 800px) {
+            .bell-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bell-grid .bell-card:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+        @media (max-width: 500px) {
+            .bell-grid {
+                grid-template-columns: 1fr;
+            }
+            .bell-grid .bell-card:last-child {
+                grid-column: 1;
+            }
         }
         @media (max-width: 700px) {
             .network-diagram {
@@ -3087,6 +3170,10 @@
                 <div class="diff-icon">🏗️</div>
                 <h3 class="diff-title">一級建築士による「住まいの専門性」</h3>
                 <p class="diff-body">理事長・池田賢一は一級建築士として50年のキャリアを持ちます お子様の年齢・障がいの状態・将来の変化に合わせた「成長する住まい」の設計が可能 幼少期から高齢期まで 本人が安心して暮らせる住環境を一貫してプロデュースします</p>
+                <p class="diff-body" style="margin-top:10px;">
+                    <strong style="font-size:15px; color:#1A3A2A; background:#F0EDE0; padding:4px 10px; border-radius:6px; display:inline-block; margin-bottom:8px;">🏠 親子で住める住まいを提案</strong><br>
+                    障がいをもつお子様と親御様が安心して共に暮らせる住まいを設計・提案します 将来的にグループホームへ移行する際もスムーズに対応できる「つながる住まい」が実現できます
+                </p>
                 <div class="diff-point">他の福祉団体にはない「住まいの専門家」が基金を主導</div>
             </div>
             <div class="diff-card fade-in">
@@ -3098,8 +3185,8 @@
             <div class="diff-card fade-in">
                 <div class="diff-icon">💼</div>
                 <h3 class="diff-title">グループホームに住むことが「働く場所」につながる</h3>
-                <p class="diff-body">出島福祉村のグループホームに入居した方は びわ農園・加工場での仕事に参加できます 「かわいそうだから」ではなく 誇りをもって働き 収入を得る ── それが本人の生きがいになります<br><br>長崎びわジャム・びわ茶は九州大学との産学連携で品質を科学的に証明した本物のブランドです ノウフクアワード2022優秀賞を受賞し <strong>この仕組みは「長崎モデル」として長崎県内で採用・注目されています</strong></p>
-                <div class="diff-point">🏆 長崎モデル ── 県内採用・ノウフクアワード2022優秀賞受賞の農福連携</div>
+                <p class="diff-body">出島福祉村のグループホームに入居した方は びわ農園・加工場での仕事に参加できます 「かわいそうだから」ではなく 誇りをもって働き 収入を得る ── それが本人の生きがいになります<br><br>長崎びわジャム・びわ茶は九州大学との産学連携で品質を科学的に証明した本物のブランドです ノウフクアワード2022優秀賞を受賞した「本物の商品」です</p>
+                <div class="diff-point">🏆 ノウフクアワード2022優秀賞受賞 ── 誇りをもって働ける農福連携</div>
             </div>
         </div>
     </div>
@@ -3121,55 +3208,58 @@
             <img src="biwa.png" alt="びわからネットワーク全体図" style="width:100%;height:auto;border-radius:16px;display:block;">
         </div>
 
-        <div class="network-diagram" role="img" aria-label="びわからネットワーク構成図" style="margin-top:48px;">
-            <!-- 左：中心ノード -->
-            <div class="network-center">
-                <div class="network-hub">びわから<br>ネットワーク</div>
+        <!-- 7つの鐘 タイトル -->
+        <div style="text-align:center; margin: 56px auto 36px;">
+            <p style="font-family:'Shippori Mincho',serif; font-size:clamp(18px,3vw,26px); color:#1A3A2A; font-weight:700; letter-spacing:0.08em;">
+                🔔 びわからネットワークが響かせる<br>
+                <span style="font-size:clamp(22px,4vw,34px); color:#B8921E;">７つの鐘</span>
+            </p>
+            <p style="font-size:13px; color:#7A6A50; margin-top:8px;">一人ひとりの想いをつなぎ、共に支え合う未来へ</p>
+        </div>
+
+        <!-- 7つの鐘 カードグリッド -->
+        <div class="bell-grid">
+            <div class="bell-card">
+                <div class="bell-number">第一の鐘</div>
+                <div class="bell-icon">🏠</div>
+                <h3 class="bell-title">親なき後の支援体制</h3>
+                <p class="bell-body">ファイナンス・住まい・生きがいを<br>一体的にサポートします</p>
             </div>
-            <!-- 中：接続線（SVG） -->
-            <div class="network-lines" aria-hidden="true">
-                <svg viewBox="0 0 60 440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0" y1="30" x2="60" y2="30" stroke="#B8A87A" stroke-width="1.5"/>
-                    <line x1="0" y1="92" x2="60" y2="92" stroke="#B8A87A" stroke-width="1.5"/>
-                    <line x1="0" y1="154" x2="60" y2="154" stroke="#B8A87A" stroke-width="1.5"/>
-                    <line x1="0" y1="216" x2="60" y2="216" stroke="#B8A87A" stroke-width="1.5"/>
-                    <line x1="0" y1="278" x2="60" y2="278" stroke="#B8A87A" stroke-width="1.5"/>
-                    <line x1="0" y1="360" x2="60" y2="360" stroke="#4A7CC7" stroke-width="1.5"/>
-                    <line x1="0" y1="420" x2="60" y2="420" stroke="#4A7CC7" stroke-width="1.5"/>
-                    <line x1="0" y1="30" x2="0" y2="420" stroke="#B8A87A" stroke-width="1.5"/>
-                </svg>
+            <div class="bell-card">
+                <div class="bell-number">第二の鐘</div>
+                <div class="bell-icon">🤝</div>
+                <h3 class="bell-title">コミュニティ構築の場</h3>
+                <p class="bell-body">障がいをもつ当事者・家族の交流<br>障がい別のつながりの場</p>
             </div>
-            <!-- 右：各ノード -->
-            <div class="network-nodes">
-                <div class="network-node">
-                    <strong>🏠 親なき後の支援体制</strong>
-                    ファイナンス・住まい・生きがいを一体的にサポート
-                </div>
-                <div class="network-node">
-                    <strong>🤝 コミュニティ構築の場</strong>
-                    障がいをもつ当事者・家族の交流 ／ 障がい別の交流の場
-                </div>
-                <div class="network-node">
-                    <strong>📍 地域との連携</strong>
-                    街なか情報（浜口町・南山手）<br>
-                    生活情報・衣食住・Googleマップの活用
-                </div>
-                <div class="network-node">
-                    <strong>💬 相談窓口の運用</strong>
-                    専門家による困りごと相談をワンストップで対応
-                </div>
-                <div class="network-node">
-                    <strong>📋 行政・法律情報の発信</strong>
-                    行政情報・法律改正情報・専門家の声（寄稿）をわかりやすく解説
-                </div>
-                <div class="network-node highlight">
-                    <strong>🛒 ネット販売強化</strong>
-                    長崎びわジャム・びわ茶のオンライン販売を拡大
-                </div>
-                <div class="network-node highlight">
-                    <strong>🎉 イベント情報</strong>
-                    娯楽・スポーツ等のイベント情報を発信
-                </div>
+            <div class="bell-card">
+                <div class="bell-number">第三の鐘</div>
+                <div class="bell-icon">📍</div>
+                <h3 class="bell-title">地域との連携</h3>
+                <p class="bell-body">街なか情報（浜口町・南山手）<br>生活情報・衣食住・Googleマップ活用</p>
+            </div>
+            <div class="bell-card">
+                <div class="bell-number">第四の鐘</div>
+                <div class="bell-icon">💬</div>
+                <h3 class="bell-title">相談窓口の運用</h3>
+                <p class="bell-body">専門家による困りごと相談を<br>ワンストップで対応</p>
+            </div>
+            <div class="bell-card">
+                <div class="bell-number">第五の鐘</div>
+                <div class="bell-icon">📋</div>
+                <h3 class="bell-title">行政・法律情報の発信</h3>
+                <p class="bell-body">行政情報・法律改正・専門家の声を<br>わかりやすく解説</p>
+            </div>
+            <div class="bell-card bell-card--accent">
+                <div class="bell-number">第六の鐘</div>
+                <div class="bell-icon">🛒</div>
+                <h3 class="bell-title">ネット販売強化</h3>
+                <p class="bell-body">長崎びわジャム・びわ茶を<br>全国へ届けるオンライン販売</p>
+            </div>
+            <div class="bell-card bell-card--accent">
+                <div class="bell-number">第七の鐘</div>
+                <div class="bell-icon">🎉</div>
+                <h3 class="bell-title">イベント情報</h3>
+                <p class="bell-body">交流会・スポーツ・地域イベントなど<br>楽しみをつなぐ情報を発信</p>
             </div>
         </div>
     </div>
