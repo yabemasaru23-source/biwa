@@ -2674,7 +2674,121 @@
             .gallery-rise-item img { height: 160px; }
         }
 
-    </style>
+    
+        /* ===== BIWA NETWORK SECTION ===== */
+        .network-section {
+            background: #FAFAF7;
+            padding: 100px 24px;
+        }
+        .network-section .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .network-diagram {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+        }
+        .network-center {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            min-width: 160px;
+        }
+        .network-hub {
+            background: var(--biwa-deep);
+            color: #fff;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 20px 18px;
+            border-radius: 12px;
+            text-align: center;
+            line-height: 1.6;
+            box-shadow: 0 4px 18px rgba(30,60,30,0.18);
+        }
+        .network-note {
+            background: #E8F0FF;
+            border: 2px solid #4A7CC7;
+            color: #2A4A8A;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 14px 14px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .network-lines {
+            flex: 0 0 60px;
+            position: relative;
+            align-self: stretch;
+        }
+        .network-lines svg {
+            width: 100%;
+            height: 100%;
+        }
+        .network-nodes {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .network-node {
+            background: #fff;
+            border: 1.5px solid #D4C9A8;
+            border-radius: 10px;
+            padding: 14px 20px;
+            font-size: 13px;
+            color: var(--ink);
+            line-height: 1.6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
+        }
+        .network-node:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .network-node strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--biwa-deep);
+            margin-bottom: 2px;
+        }
+        .network-node.highlight {
+            border-color: #4A7CC7;
+            background: #F0F5FF;
+        }
+        .network-node.highlight strong {
+            color: #2A4A8A;
+        }
+        .network-year-badge {
+            display: inline-block;
+            font-size: 11px;
+            color: var(--stone);
+            background: #F0EDE4;
+            border-radius: 4px;
+            padding: 2px 8px;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 700px) {
+            .network-diagram {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .network-center {
+                flex-direction: row;
+                min-width: unset;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .network-hub { font-size: 14px; }
+            .network-lines { display: none; }
+        }
+</style>
 </head>
 <body>
 
@@ -2692,6 +2806,7 @@
             <a href="#origin">基金の由来</a>
             <a href="#about">課題と解決策</a>
             <a href="#story">感動の物語</a>
+            <a href="#network">ネットワーク</a>
             <a href="#founder">理事長の想い</a>
             <a href="#join">会員登録</a>
             <a href="#join" class="nav-cta">今すぐ賛同する</a>
@@ -2976,20 +3091,89 @@
             </div>
             <div class="diff-card fade-in">
                 <div class="diff-icon">⚖️</div>
-                <h3 class="diff-title">弁護士・医師・税理士が揃う専門家チーム</h3>
-                <p class="diff-body">法定後見 相続 資産管理 医療連携 ── 親亡き後に必要なすべての専門知識をワンストップで提供します 出島福祉村が窓口を一本化し ご家族が各専門家を個別に探す必要はありません</p>
-                <div class="diff-point">24年間で築いた専門家ネットワークを基金会員が活用できる</div>
+                <h3 class="diff-title">弁護士・医師・税理士との信頼できる専門家ネットワーク</h3>
+                <p class="diff-body">法定後見・相続・資産管理・医療連携など 親亡き後に必要な専門知識を持つ各分野のプロと 24年間にわたりネットワークを築いてきました<br><br>直接サービスを提供するのではなく 出島福祉村が信頼できる専門家を責任をもってご紹介します ご家族が一から専門家を探す手間と不安を省きます</p>
+                <div class="diff-point">「誰に相談すればいい？」── 窓口はひとつ、出島福祉村にお任せください</div>
             </div>
             <div class="diff-card fade-in">
                 <div class="diff-icon">💼</div>
-                <h3 class="diff-title">「かわいそう」ではなく「価値ある仕事」</h3>
-                <p class="diff-body">障がいをもつ方が作る長崎びわジャム・びわ茶は 同情で買ってもらう商品ではありません 九州大学との産学連携で品質を科学的に証明し ノウフクアワード2022優秀賞を受賞した「本物の商品」です 誇りをもって働ける仕事が 生きがいを創ります</p>
-                <div class="diff-point">収益は施設運営と福祉へ100%再投資</div>
+                <h3 class="diff-title">グループホームに住むことが「働く場所」につながる</h3>
+                <p class="diff-body">出島福祉村のグループホームに入居した方は びわ農園・加工場での仕事に参加できます 「かわいそうだから」ではなく 誇りをもって働き 収入を得る ── それが本人の生きがいになります<br><br>長崎びわジャム・びわ茶は九州大学との産学連携で品質を科学的に証明した本物のブランドです ノウフクアワード2022優秀賞を受賞し <strong>この仕組みは「長崎モデル」として長崎県内で採用・注目されています</strong></p>
+                <div class="diff-point">🏆 長崎モデル ── 県内採用・ノウフクアワード2022優秀賞受賞の農福連携</div>
             </div>
         </div>
     </div>
 </section>
 
+
+
+<!-- ===== BIWA NETWORK SECTION ===== -->
+<section class="network-section fade-in" id="network" aria-labelledby="network-heading">
+    <div class="section-inner">
+        <div style="text-align:center; max-width:680px; margin:0 auto 12px;">
+            <span class="section-label">BIWA NETWORK</span>
+            <h2 class="section-title" id="network-heading">びわからネットワークとは</h2>
+            <div class="section-divider" style="margin:16px auto;"></div>
+            <p class="section-body">グループホームや農福連携の「ものづくり」にとどまらず<br>障がいをもつ方と家族を取り巻くすべての課題に応える<br>総合的なつながりのプラットフォームです</p>
+        </div>
+        <!-- biwa.png: ネットワーク全体図 -->
+        <div style="text-align:center; margin: 40px auto 0; max-width:900px;">
+            <img src="biwa.png" alt="びわからネットワーク全体図" style="width:100%;height:auto;border-radius:16px;display:block;">
+        </div>
+
+        <div class="network-diagram" role="img" aria-label="びわからネットワーク構成図" style="margin-top:48px;">
+            <!-- 左：中心ノード -->
+            <div class="network-center">
+                <div class="network-hub">びわから<br>ネットワーク</div>
+            </div>
+            <!-- 中：接続線（SVG） -->
+            <div class="network-lines" aria-hidden="true">
+                <svg viewBox="0 0 60 440" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="30" x2="60" y2="30" stroke="#B8A87A" stroke-width="1.5"/>
+                    <line x1="0" y1="92" x2="60" y2="92" stroke="#B8A87A" stroke-width="1.5"/>
+                    <line x1="0" y1="154" x2="60" y2="154" stroke="#B8A87A" stroke-width="1.5"/>
+                    <line x1="0" y1="216" x2="60" y2="216" stroke="#B8A87A" stroke-width="1.5"/>
+                    <line x1="0" y1="278" x2="60" y2="278" stroke="#B8A87A" stroke-width="1.5"/>
+                    <line x1="0" y1="360" x2="60" y2="360" stroke="#4A7CC7" stroke-width="1.5"/>
+                    <line x1="0" y1="420" x2="60" y2="420" stroke="#4A7CC7" stroke-width="1.5"/>
+                    <line x1="0" y1="30" x2="0" y2="420" stroke="#B8A87A" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <!-- 右：各ノード -->
+            <div class="network-nodes">
+                <div class="network-node">
+                    <strong>🏠 親なき後の支援体制</strong>
+                    ファイナンス・住まい・生きがいを一体的にサポート
+                </div>
+                <div class="network-node">
+                    <strong>🤝 コミュニティ構築の場</strong>
+                    障がいをもつ当事者・家族の交流 ／ 障がい別の交流の場
+                </div>
+                <div class="network-node">
+                    <strong>📍 地域との連携</strong>
+                    街なか情報（浜口町・南山手）<br>
+                    生活情報・衣食住・Googleマップの活用
+                </div>
+                <div class="network-node">
+                    <strong>💬 相談窓口の運用</strong>
+                    専門家による困りごと相談をワンストップで対応
+                </div>
+                <div class="network-node">
+                    <strong>📋 行政・法律情報の発信</strong>
+                    行政情報・法律改正情報・専門家の声（寄稿）をわかりやすく解説
+                </div>
+                <div class="network-node highlight">
+                    <strong>🛒 ネット販売強化</strong>
+                    長崎びわジャム・びわ茶のオンライン販売を拡大
+                </div>
+                <div class="network-node highlight">
+                    <strong>🎉 イベント情報</strong>
+                    娯楽・スポーツ等のイベント情報を発信
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ===== PHOTO GALLERY ===== -->
 <section class="gallery-section" aria-label="活動写真ギャラリー">
@@ -3933,6 +4117,7 @@
                     <li><a href="#origin">びわから基金の由来</a></li>
                     <li><a href="#about">課題と解決策</a></li>
                     <li><a href="#difference">他基金との違い</a></li>
+                    <li><a href="#network">びわからネットワーク</a></li>
                     <li><a href="#founder">理事長の想い</a></li>
                     <li><a href="#roadmap">ロードマップ</a></li>
                     <li><a href="#donate">寄付プラン</a></li>
