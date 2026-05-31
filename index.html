@@ -25,6 +25,11 @@
     <meta name="twitter:description" content="社会全体で一生を支える「長崎モデル」。1万人の応援団を募集中。">
     
     <!-- Google Fonts -->
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init("C8vTz_qHasY6rKYGF");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -4370,39 +4375,65 @@ document.querySelectorAll('.counter[data-target]').forEach(el => {
 // ===== FORM SUBMIT =====
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Validate required fields
+
+    // バリデーション
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const typeSelected = document.querySelector('input[name="type"]:checked');
-    
+
     if (!name || !email || !typeSelected) {
         alert('必須項目（お名前・メールアドレス・参加の形）をご入力ください。');
         return;
     }
-    
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         alert('有効なメールアドレスを入力してください。');
         return;
     }
-    
-    // Show thank you
-    document.querySelector('.form-wrap form > *:not(#thank-you)').style.display = 'none';
-    
-    // Actually, let's just show thank you by hiding form fields and showing message
-    const formFields = document.querySelectorAll('.form-field, .form-row, .form-note, .form-submit');
-    formFields.forEach(el => el.style.display = 'none');
-    
-    const thankYou = document.getElementById('thank-you');
-    thankYou.style.display = 'block';
-    thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    
-    // GA event tracking placeholder
-    // if (typeof gtag !== 'undefined') {
-    //     gtag('event', 'form_submit', { event_category: 'biwakara_fund', event_label: typeSelected.value });
-    // }
+
+    // 送信ボタンを無効化
+    const btn = document.querySelector('.form-submit-btn');
+    btn.disabled = true;
+    btn.textContent = '送信中...';
+
+    // フォームデータを収集
+    const typeLabels = {
+        monthly: '月額寄付（月1,500円〜）',
+        once: '単発寄付・法人協賛',
+        legacy: '遺贈寄付について相談したい',
+        info: 'まずは資料・活動内容を知りたい'
+    };
+    const templateParams = {
+        from_name:    name,
+        from_email:   email,
+        tel:          document.getElementById('tel').value.trim() || '未入力',
+        org:          document.getElementById('org').value.trim() || '未入力',
+        type_label:   typeLabels[typeSelected.value] || typeSelected.value,
+        message:      document.getElementById('message').value.trim() || '（メッセージなし）',
+        to_email1:    'yabemasaru23@gmail.com',
+        to_email2:    'day-urakami@mxc.cncm.ne.jp'
+    };
+
+    emailjs.send('service_yckyiki', 'template_6l17bnr', templateParams)
+        .then(function() {
+            // 送信成功 → サンクス画面表示
+            const formFields = document.querySelectorAll('.form-field, .form-row, .form-note, .form-submit');
+            formFields.forEach(el => el.style.display = 'none');
+            const thankYou = document.getElementById('thank-you');
+            thankYou.style.display = 'block';
+            thankYou.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // GAイベント
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', { event_category: 'biwakara_fund', event_label: typeSelected.value });
+            }
+        })
+        .catch(function(error) {
+            console.error('EmailJS error:', error);
+            alert('送信に失敗しました。お手数ですが、お電話（095-842-8222）にてご連絡ください。');
+            btn.disabled = false;
+            btn.innerHTML = '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>賛同を申し込む・問い合わせる';
+        });
 });
 
 // ===== MODAL (for plan buttons) =====
