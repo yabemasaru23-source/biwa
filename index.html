@@ -1577,7 +1577,7 @@
             /* Founder */
             .founder-layout { grid-template-columns: 1fr; gap: 36px; }
             .founder-image-frame img { height: 320px; object-position: center center; }
-            .founder-image-wrap { display: flex; justify-content: center; }
+            .founder-image-wrap { display: flex; justify-content: center; margin: 0 auto; }
             .founder-blockquote { font-size: clamp(20px, 6vw, 28px); }
             .founder-blockquote br { display: none; }
             .founder-content { padding-top: 0; }
@@ -1918,8 +1918,9 @@
                 gap: 28px;
             }
             .inline-photo-wrap.inline-photo-right { order: 0; }
-            .inline-photo-img { width: 100%; height: 240px; max-width: 100%; }
-            .inline-photo-cap { max-width: 100%; }
+            .inline-photo-wrap { display: flex; flex-direction: column; align-items: center; }
+            .inline-photo-img { width: 85%; height: 240px; max-width: 340px; }
+            .inline-photo-cap { max-width: 85%; text-align: center; }
 
             /* Photo strip - stack on mobile */
             .photo-strip-inner {
@@ -3024,7 +3025,7 @@
         <div class="inline-photo-block fade-in">
             <div class="inline-photo-wrap inline-photo-right">
                 <img loading="lazy" decoding="async"
-                    src="ikeda003.png"
+                    src="ikeda001.png"
                     alt="池田賢一理事長 —— 24年間、障がいをもつ方々と向き合ってきた"
                     class="inline-photo-img"
                     onerror="this.closest('.inline-photo-wrap').style.display='none'"
