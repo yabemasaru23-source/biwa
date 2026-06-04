@@ -1915,12 +1915,13 @@
             /* Inline photo block - stack on mobile */
             .inline-photo-block {
                 flex-direction: column;
+                align-items: center;
                 gap: 28px;
             }
             .inline-photo-wrap.inline-photo-right { order: 0; }
-            .inline-photo-wrap { display: flex; flex-direction: column; align-items: center; }
-            .inline-photo-img { width: 85%; height: 240px; max-width: 340px; }
-            .inline-photo-cap { max-width: 85%; text-align: center; }
+            .inline-photo-wrap { display: flex; flex-direction: column; align-items: center; width: 100%; }
+            .inline-photo-img { width: 85%; height: 240px; max-width: 340px; margin: 0 auto; display: block; }
+            .inline-photo-cap { max-width: 85%; text-align: center; margin: 0 auto; }
 
             /* Photo strip - stack on mobile */
             .photo-strip-inner {
@@ -3403,9 +3404,9 @@
                 <div class="founder-bg-deco"></div>
                 <div class="founder-image-frame">
                     <img loading="lazy" decoding="async" 
-                        src="ikeda001.png" 
+                        src="ikeda002.png" 
                         alt="池田賢一 出島福祉村 理事長" 
-                        onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'; this.onerror=null;"
+                        onerror="this.onerror=null;"
                     >
                     <div class="founder-image-overlay"></div>
                     <div class="founder-nameplate">
@@ -3747,8 +3748,8 @@
         <div class="story-closing fade-in">
             <div class="story-closing-photo">
                 <img loading="lazy" decoding="async"
-                    src="ikeda001.png"
-                    alt="びわ畑に立つ池田賢一理事長"
+                    src="ikeda003.png"
+                    alt="出島福祉村 池田賢一理事長"
                     onerror="this.style.display='none'"
                 >
                 <div class="story-closing-photo-caption">
