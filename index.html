@@ -118,7 +118,7 @@
         }
 
         html, body {
-            scroll-behavior: smooth;
+            scroll-behavior: auto;
             overflow-x: hidden;
             max-width: 100%;
         }
@@ -1576,7 +1576,8 @@
 
             /* Founder */
             .founder-layout { grid-template-columns: 1fr; gap: 36px; }
-            .founder-image-frame img { height: 320px; object-position: center 20%; }
+            .founder-image-frame img { height: 320px; object-position: center center; }
+            .founder-image-wrap { display: flex; justify-content: center; }
             .founder-blockquote { font-size: clamp(20px, 6vw, 28px); }
             .founder-blockquote br { display: none; }
             .founder-content { padding-top: 0; }
@@ -1857,7 +1858,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center 70%;
             display: block;
             transition: transform 0.8s ease;
             filter: contrast(1.05) saturate(1.05);
@@ -1926,6 +1927,7 @@
                 min-height: auto;
             }
             .photo-strip-img-wrap { height: 260px; }
+            .photo-strip-img { object-position: center 70%; }
             .photo-strip-overlay {
                 background: linear-gradient(
                     to bottom,
@@ -1956,7 +1958,7 @@
             width: 100%;
             height: 500px;
             object-fit: cover;
-            object-position: center 40%;
+            object-position: center 75%;
             display: block;
             filter: contrast(1.04) saturate(1.06);
             transition: transform 1s ease;
@@ -2007,7 +2009,7 @@
         }
 
         @media (max-width: 768px) {
-            .biwa2-img { height: 300px; }
+            .biwa2-img { height: 300px; object-position: center 75%; }
             .biwa2-caption { flex-direction: column; align-items: flex-start; gap: 8px; padding: 24px 20px; }
             .biwa2-caption-text { font-size: 14px; }
         }
@@ -4284,6 +4286,24 @@
 </div>
 
 <script>
+// ===== SAFE SMOOTH SCROLL FOR ANCHOR LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        if (!targetId) return;
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        e.preventDefault();
+        
+        // モバイルでも確実に動作するスクロール
+        const headerH = document.getElementById('site-header') 
+            ? document.getElementById('site-header').offsetHeight : 70;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerH;
+        
+        window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+});
+
 // ===== SCROLL HANDLER =====
 const header = document.getElementById('site-header');
 const fixedCta = document.getElementById('fixed-cta');
@@ -4297,8 +4317,13 @@ function updateOnScroll() {
     // Header shadow
     header.classList.toggle('scrolled', scrollY > 20);
     
-    // Fixed CTA
-    if (scrollY > heroHeight * 0.7) {
+    // Fixed CTA（フォームセクションでは非表示）
+    const joinSection = document.getElementById('join');
+    const joinTop = joinSection ? joinSection.getBoundingClientRect().top : 9999;
+    const joinBottom = joinSection ? joinSection.getBoundingClientRect().bottom : 9999;
+    const inJoin = joinTop < window.innerHeight * 0.5 && joinBottom > 0;
+
+    if (scrollY > heroHeight * 0.7 && !inJoin) {
         fixedCta.classList.add('visible');
     } else {
         fixedCta.classList.remove('visible');
