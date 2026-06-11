@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://dejimafukushimura.or.jp/biwakara/">
     <meta property="og:site_name" content="びわから基金">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:image" content="https://dejimafukushimura.or.jp/biwakara/ikeda02.jpg">
+    <meta property="og:image" content="https://dejimafukushimura.or.jp/biwakara/ikeda002.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="びわから基金｜「親亡き後」の不安を、日本からなくす">
     <meta name="twitter:description" content="社会全体で一生を支える「長崎モデル」。1万人の応援団を募集中。">
@@ -2883,6 +2883,96 @@
             .network-hub { font-size: 14px; }
             .network-lines { display: none; }
         }
+
+        /* ===== STORY SECTION (FOUNDER'S MESSAGE - PDF design) ===== */
+        .story-photos {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        .story-photo {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+            transform: rotate(-1.5deg);
+            border: 6px solid #fff;
+        }
+        .story-photo-2 {
+            transform: rotate(2deg);
+            margin-top: 24px;
+        }
+        .story-photo img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        .story-message {
+            background: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            padding: 48px 52px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+            margin-bottom: 40px;
+        }
+        .story-lead {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(20px, 3vw, 28px);
+            font-weight: 700;
+            color: var(--nagasaki-deep);
+            margin-bottom: 28px;
+            line-height: 1.6;
+            border-left: 5px solid var(--biwa-warm);
+            padding-left: 18px;
+        }
+        .story-para {
+            font-size: 15.5px;
+            color: var(--ink);
+            line-height: 2.1;
+            margin-bottom: 22px;
+            text-align: justify;
+        }
+        .story-divider-dotted {
+            border-top: 2px dotted rgba(200,134,10,0.5);
+            margin: 36px 0;
+        }
+        .story-conclusion {
+            font-family: 'Shippori Mincho', serif;
+            font-size: clamp(17px, 2.4vw, 22px);
+            font-weight: 600;
+            color: var(--nagasaki-deep);
+            line-height: 1.9;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .story-signature {
+            text-align: right;
+            margin-top: 24px;
+        }
+        .story-sig-org {
+            font-size: 14px;
+            color: var(--ink-light);
+            margin-bottom: 4px;
+        }
+        .story-sig-name {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: 0.1em;
+        }
+        @media (max-width: 700px) {
+            .story-photos {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .story-photo { transform: rotate(0deg); border-width: 4px; }
+            .story-photo-2 { transform: rotate(0deg); margin-top: 0; }
+            .story-photo img { height: 220px; }
+            .story-message { padding: 32px 22px; }
+            .story-para { font-size: 14.5px; line-height: 2; }
+            .story-conclusion br { display: none; }
+        }
 </style>
 </head>
 <body>
@@ -2947,13 +3037,13 @@
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <div class="stat-num"><span class="counter" data-target="200">0</span><span>名</span></div>
-                <div class="stat-label">現在の賛同者</div>
+                <div class="stat-num" style="font-size:clamp(18px,2.4vw,26px);"><span>九州大学</span></div>
+                <div class="stat-label">産学連携の実績</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <div class="stat-num"><span>10,000</span><span>名</span></div>
-                <div class="stat-label">目標賛同者数</div>
+                <div class="stat-num" style="font-size:clamp(18px,2.4vw,26px);"><span>黄綬褒章</span></div>
+                <div class="stat-label">理事長 受章（2025年）</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
@@ -2969,16 +3059,16 @@
     <div class="ticker-track" id="ticker">
         <span class="ticker-item"><span class="ticker-dot"></span>グループホームの不足を解消する</span>
         <span class="ticker-item"><span class="ticker-dot"></span>親亡き後の安心を社会全体で作る</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>弁護士・税理士・医療が連携する専門家ネットワーク</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>専門家の紹介と情報発信を行う情報ネットワーク</span>
         <span class="ticker-item"><span class="ticker-dot"></span>農福連携「びわ茶」ノウフクアワード2022優秀賞</span>
         <span class="ticker-item"><span class="ticker-dot"></span>九州大学との産学連携で品質を科学的に証明</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>第三者監査による完全な透明性の確保</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>情報ネットワークで地域とつながる安心</span>
         <span class="ticker-item"><span class="ticker-dot"></span>グループホームの不足を解消する</span>
         <span class="ticker-item"><span class="ticker-dot"></span>親亡き後の安心を社会全体で作る</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>弁護士・税理士・医療が連携する専門家ネットワーク</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>専門家の紹介と情報発信を行う情報ネットワーク</span>
         <span class="ticker-item"><span class="ticker-dot"></span>農福連携「びわ茶」ノウフクアワード2022優秀賞</span>
         <span class="ticker-item"><span class="ticker-dot"></span>九州大学との産学連携で品質を科学的に証明</span>
-        <span class="ticker-item"><span class="ticker-dot"></span>第三者監査による完全な透明性の確保</span>
+        <span class="ticker-item"><span class="ticker-dot"></span>情報ネットワークで地域とつながる安心</span>
     </div>
 </div>
 
@@ -3051,9 +3141,9 @@
                 <svg class="problem-card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24 6C14.06 6 6 14.06 6 24S14.06 42 24 42 42 33.94 42 24 33.94 6 24 6ZM26 34H22V22H26V34ZM26 18H22V14H26V18Z" fill="rgba(255,255,255,0.5)"/>
                 </svg>
-                <h3 class="problem-card-title">制度が複雑すぎて孤立する</h3>
-                <p class="problem-card-body">法定後見 資産管理 障がい福祉サービス… 必要な支援が複雑に絡み合い専門家なしでは理解できません ご家族が孤立無援の状態に置かれています</p>
-                <span class="problem-card-accent">→ 情報・法的支援の問題</span>
+                <h3 class="problem-card-title">情報が行き届かない</h3>
+                <p class="problem-card-body">どこに相談して良いか分からない 同じ境遇の方と関わりたい 地域の情報を知りたい等 情報が不足し孤立する現状が増えています</p>
+                <span class="problem-card-accent">→ 情報・つながりの問題</span>
             </div>
         </div>
         
@@ -3062,17 +3152,17 @@
                 <div class="vs-label">現状</div>
                 <ul class="vs-list">
                     <li>何年も空きを待つ施設探し</li>
-                    <li>家族だけで複雑な法律・資産管理と格闘</li>
-                    <li>行政の縦割り対応による孤立</li>
+                    <li>どこに相談して良いか分からない</li>
+                    <li>情報が行き届かず孤立する</li>
                 </ul>
             </div>
             <div class="vs-arrow">→</div>
             <div class="vs-col vs-good">
                 <div class="vs-label nagasaki">長崎モデル</div>
                 <ul class="vs-list">
-                    <li>基金主導で空き家を活用し施設を自ら創出</li>
-                    <li>ワンストップで専門家チームが相続・後見を代行</li>
-                    <li>生涯を通じた切れ目のないナビゲート</li>
+                    <li>空き家を活用し グループホームを創出</li>
+                    <li>情報ネットワークによる専門家からのアドバイス</li>
+                    <li>障がい者のコミュニティ作り</li>
                 </ul>
             </div>
         </div>
@@ -3110,7 +3200,7 @@
             <div class="model-card fade-in">
                 <div class="model-num">02</div>
                 <h3 class="model-title">専門家ネットワーク<br><small style="font-size: 0.65em; color: var(--ink-light); font-weight: 500;">びわからNETWORK</small></h3>
-                <p class="model-body">弁護士・税理士・法定後見人・医療機関が一体となったネットワーク 出島福祉村が窓口を一本化しご家族のあらゆる悩みにワンストップで対応します</p>
+                <p class="model-body">専門家の紹介・地域情報・交流・イベント情報を発信する情報ネットワーク 出島福祉村が窓口となりご家族のあらゆる悩みに寄り添います</p>
                 <ul class="model-list">
                     <li>法的支援・資産管理の安心体制</li>
                     <li>相続・後見制度の専門サポート</li>
@@ -3148,7 +3238,7 @@
                         <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M13 20h14M20 13v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                     </div>
                     <div>
-                        <div class="diff-title">弁護士・医師・税理士が連携</div>
+                        <div class="diff-title">情報ネットワークの構築</div>
                         <div class="diff-body">法的後見・資産管理・医療まで出島福祉村が窓口を一本化 複数の専門家に個別に相談する必要がありません</div>
                     </div>
                 </div>
@@ -3180,7 +3270,7 @@
         <div class="diff-grid">
             <div class="diff-card fade-in">
                 <div class="diff-icon">🏗️</div>
-                <h3 class="diff-title">一級建築士による「住まいの専門性」</h3>
+                <h3 class="diff-title">街作りのプロ（一級建築士）と情報ネットワーク</h3>
                 <p class="diff-body">理事長・池田賢一は一級建築士として50年のキャリアを持ちます お子様の年齢・障がいの状態・将来の変化に合わせた「成長する住まい」の設計が可能 幼少期から高齢期まで 本人が安心して暮らせる住環境を一貫してプロデュースします</p>
                 <p class="diff-body" style="margin-top:10px;">
                     <strong style="font-size:15px; color:#1A3A2A; background:#F0EDE0; padding:4px 10px; border-radius:6px; display:inline-block; margin-bottom:8px;">🏠 親子で住める住まいを提案</strong><br>
@@ -3190,9 +3280,9 @@
             </div>
             <div class="diff-card fade-in">
                 <div class="diff-icon">⚖️</div>
-                <h3 class="diff-title">弁護士・医師・税理士との信頼できる専門家ネットワーク</h3>
-                <p class="diff-body">法定後見・相続・資産管理・医療連携など 親亡き後に必要な専門知識を持つ各分野のプロと 24年間にわたりネットワークを築いてきました<br><br>直接サービスを提供するのではなく 出島福祉村が信頼できる専門家を責任をもってご紹介します ご家族が一から専門家を探す手間と不安を省きます</p>
-                <div class="diff-point">「誰に相談すればいい？」── 窓口はひとつ、出島福祉村にお任せください</div>
+                <h3 class="diff-title">障がい者のための情報ネットワーク</h3>
+                <p class="diff-body">法定後見・相続・資産管理・医療連携など複雑で専門的知識を要する問題について 専門家の紹介を行い 又 専門家からの情報を発信します<br><br>障がい者のための情報ネットワークを構築し 様々な情報を発信します：専門家の紹介情報／障がい者・ご家族間の交流／各種イベント情報／地域店舗情報</p>
+                <div class="diff-point">情報ネットワークで「つながり」と「安心」をお届けします</div>
             </div>
             <div class="diff-card fade-in">
                 <div class="diff-icon">💼</div>
@@ -3252,7 +3342,7 @@
             <div class="bell-card">
                 <div class="bell-number">第四の鐘</div>
                 <div class="bell-icon">💬</div>
-                <h3 class="bell-title">相談窓口の運用</h3>
+                <h3 class="bell-title">専門家による情報発信</h3>
                 <p class="bell-body">専門家による困りごと相談を<br>ワンストップで対応</p>
             </div>
             <div class="bell-card">
@@ -3435,7 +3525,7 @@
                     20年を超える運営を通してご家族が抱える最大の懸念である「親亡き後の不安」を痛感しています これを解決するには行政の支援だけでは限界があります
                 </p>
                 <p class="founder-text" style="color: var(--ink); font-weight: 600;">
-                    だからこそ「社会全体で支えるモデルケース」を長崎から創りたいのです 皆様からお預かりした寄付は返礼品などのコストを極力抑制しグループホーム建設と専門家ネットワーク事業へ優先的に投入することをお約束します
+                    だからこそ「社会全体で支えるモデルケース」を長崎から創りたいのです 皆様からお預かりした寄付はグループホーム建設と情報ネットワーク事業へ大切に活用させていただきます
                 </p>
                 
                 <div class="founder-sign">
@@ -3448,323 +3538,56 @@
     </div>
 </section>
 
-<!-- ===== STORY SECTION ===== -->
+<!-- ===== STORY SECTION (FOUNDER'S MESSAGE) ===== -->
 <section class="story-section" id="story" aria-labelledby="story-heading">
     <div class="story-bg-left"></div>
     <div class="story-bg-right"></div>
-    <div class="section-inner" style="position: relative; z-index: 1;">
+    <div class="section-inner" style="position: relative; z-index: 1; max-width: 880px;">
 
-        <div class="fade-in" style="text-align: center; max-width: 760px; margin: 0 auto 72px;">
-            <span class="section-label">A TRUE STORY</span>
-            <h2 class="section-title" id="story-heading" style="font-size: clamp(28px, 4vw, 48px);">長崎に原爆が落ちて80年目の夏</h2>
-            <div class="section-divider" style="margin: 16px auto;"></div>
-            <p style="font-size: 17px; color: var(--ink-light); line-height: 1.9;">
-                これはある家族の実話です そしてびわから基金が生まれた原点の物語です
-            </p>
+        <div class="fade-in" style="text-align: center; max-width: 760px; margin: 0 auto 56px;">
+            <span class="section-label">FOUNDER'S MESSAGE</span>
+            <h2 class="section-title" id="story-heading" style="font-size: clamp(30px, 5vw, 52px); margin-top: 8px;">この基金への想い</h2>
+            <p style="font-family: 'Shippori Mincho', serif; font-size: 17px; color: var(--ink-light); margin-top: 12px; letter-spacing: 0.1em;">— 出島福祉村 理事長より —</p>
         </div>
 
-        <!-- Scene 1: Bath illustration + story -->
-        <div class="story-block fade-in">
-            <div class="story-illustration">
-                <img loading="lazy" decoding="async" src="furo01.png" alt="お子様を抱きかかえている介助の場面" style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover;">
-                <!-- SVG REMOVED - replaced with real photo -->
-                <svg style="display:none" viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Bathroom background -->
-                    <rect width="520" height="380" fill="#F0EDE8" rx="12"/>
-                    <!-- Wall tiles -->
-                    <rect x="0" y="0" width="520" height="220" fill="#E8F0F5" rx="12"/>
-                    <line x1="0" y1="60" x2="520" y2="60" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="0" y1="120" x2="520" y2="120" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="0" y1="180" x2="520" y2="180" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="80" y1="0" x2="80" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="160" y1="0" x2="160" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="240" y1="0" x2="240" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="320" y1="0" x2="320" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="400" y1="0" x2="400" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <line x1="480" y1="0" x2="480" y2="220" stroke="#D0DDE8" stroke-width="1"/>
-                    <!-- Floor -->
-                    <rect x="0" y="220" width="520" height="160" fill="#E8E0D5" rx="0"/>
-                    <!-- Warm light glow from top -->
-                    <ellipse cx="260" cy="30" rx="180" ry="60" fill="rgba(255,220,120,0.18)"/>
-                    <!-- Steam wisps -->
-                    <path d="M180 95 Q185 75 178 60 Q171 45 176 28" stroke="#C8D8E8" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-                    <path d="M200 100 Q207 78 200 63 Q193 48 200 30" stroke="#C8D8E8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M220 92 Q226 72 220 58 Q214 44 221 26" stroke="#C8D8E8" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
-                    <!-- Bathtub -->
-                    <rect x="100" y="185" width="200" height="90" rx="16" fill="#FFFFFF" stroke="#C8C0B0" stroke-width="2"/>
-                    <rect x="108" y="192" width="184" height="75" rx="12" fill="#D4EBF5" opacity="0.7"/>
-                    <!-- Water surface shimmer -->
-                    <path d="M115 215 Q150 210 185 215 Q220 220 255 215 Q270 212 280 215" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" fill="none"/>
-                    <!-- Tub legs -->
-                    <rect x="115" y="268" width="10" height="14" rx="3" fill="#B0A898"/>
-                    <rect x="275" y="268" width="10" height="14" rx="3" fill="#B0A898"/>
-                    <!-- Faucet -->
-                    <rect x="192" y="174" width="16" height="12" rx="3" fill="#C0B8A8"/>
-                    <path d="M200 174 L200 158" stroke="#B0A898" stroke-width="4" stroke-linecap="round"/>
-
-                    <!-- Wheelchair (left side) -->
-                    <circle cx="95" cy="295" r="22" fill="none" stroke="#8899AA" stroke-width="3"/>
-                    <circle cx="95" cy="295" r="6" fill="#8899AA"/>
-                    <line x1="95" y1="295" x2="115" y2="278" stroke="#8899AA" stroke-width="2"/>
-                    <line x1="95" y1="295" x2="117" y2="298" stroke="#8899AA" stroke-width="2"/>
-                    <circle cx="130" cy="305" r="12" fill="none" stroke="#8899AA" stroke-width="2.5"/>
-                    <circle cx="130" cy="305" r="4" fill="#8899AA"/>
-                    <!-- Wheelchair frame -->
-                    <path d="M95 273 L140 260 L155 260" stroke="#8899AA" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <path d="M140 260 L145 295 L130 295" stroke="#8899AA" stroke-width="3" fill="none" stroke-linecap="round"/>
-                    <!-- Wheelchair seat -->
-                    <rect x="140" y="248" width="45" height="16" rx="4" fill="#AABBCC" opacity="0.8"/>
-                    <!-- Footrest -->
-                    <path d="M145 295 L145 308 L165 308" stroke="#8899AA" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-
-                    <!-- Son (in tub - just head/shoulders visible) -->
-                    <!-- Head -->
-                    <ellipse cx="200" cy="203" rx="22" ry="24" fill="#F5D5B8"/>
-                    <!-- Hair -->
-                    <ellipse cx="200" cy="190" rx="22" ry="14" fill="#3A2A1A"/>
-                    <ellipse cx="185" cy="196" rx="8" ry="10" fill="#3A2A1A"/>
-                    <ellipse cx="215" cy="196" rx="8" ry="10" fill="#3A2A1A"/>
-                    <!-- Son's face - peaceful smile -->
-                    <ellipse cx="193" cy="204" rx="3" ry="3.5" fill="#E8C4A0"/>
-                    <ellipse cx="207" cy="204" rx="3" ry="3.5" fill="#E8C4A0"/>
-                    <path d="M193 210 Q200 216 207 210" stroke="#C49880" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                    <!-- Eyes - closed/relaxed -->
-                    <path d="M191 202 Q193 200 196 202" stroke="#5A3A2A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <path d="M204 202 Q207 200 209 202" stroke="#5A3A2A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <!-- Shoulders in water -->
-                    <path d="M175 222 Q200 218 225 222" stroke="#F0C8A0" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.6"/>
-
-                    <!-- Father figure (standing, washing son) -->
-                    <!-- Father body -->
-                    <ellipse cx="310" cy="230" rx="28" ry="42" fill="#E8D0B8"/>
-                    <!-- Father shirt/undershirt - in bath helping -->
-                    <ellipse cx="310" cy="238" rx="26" ry="35" fill="#F5F0E8"/>
-                    <!-- Father head -->
-                    <ellipse cx="310" cy="182" rx="24" ry="26" fill="#E0C0A0"/>
-                    <!-- Grey hair -->
-                    <ellipse cx="310" cy="169" rx="24" ry="12" fill="#888880"/>
-                    <ellipse cx="292" cy="176" rx="9" ry="11" fill="#888880"/>
-                    <ellipse cx="328" cy="176" rx="9" ry="11" fill="#888880"/>
-                    <!-- Father face - gentle, focused -->
-                    <path d="M300 186 Q310 192 320 186" stroke="#C09878" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                    <ellipse cx="302" cy="181" rx="3.5" ry="3.5" fill="#7A5A4A" opacity="0.9"/>
-                    <ellipse cx="318" cy="181" rx="3.5" ry="3.5" fill="#7A5A4A" opacity="0.9"/>
-                    <!-- Wrinkles - age showing -->
-                    <path d="M295 177 Q297 175 300 177" stroke="#C09878" stroke-width="1" fill="none" opacity="0.5"/>
-                    <path d="M320 177 Q322 175 325 177" stroke="#C09878" stroke-width="1" fill="none" opacity="0.5"/>
-                    <!-- Father's arms reaching to wash son -->
-                    <path d="M285 218 Q255 218 235 218" stroke="#E0C0A0" stroke-width="14" stroke-linecap="round" fill="none"/>
-                    <path d="M335 218 Q355 210 360 215" stroke="#E0C0A0" stroke-width="14" stroke-linecap="round" fill="none"/>
-                    <!-- Washcloth/towel -->
-                    <ellipse cx="240" cy="218" rx="16" ry="10" fill="#FFFFFF" opacity="0.9" stroke="#E0D8C8" stroke-width="1"/>
-                    <!-- Water drops from cloth -->
-                    <circle cx="230" cy="228" r="2" fill="#A8C8E0" opacity="0.7"/>
-                    <circle cx="238" cy="232" r="1.5" fill="#A8C8E0" opacity="0.6"/>
-                    <circle cx="245" cy="229" r="2" fill="#A8C8E0" opacity="0.7"/>
-
-                    <!-- Soap bubbles -->
-                    <circle cx="165" cy="210" r="5" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
-                    <circle cx="175" cy="204" r="3" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2"/>
-                    <circle cx="158" cy="200" r="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
-                    <circle cx="240" cy="208" r="4" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.2"/>
-                    <circle cx="250" cy="202" r="3" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
-
-                    <!-- Warm light rays (atmosphere) -->
-                    <path d="M0 380 L520 380 L520 320 Q400 300 260 310 Q120 300 0 320 Z" fill="rgba(240,220,180,0.25)"/>
-
-                    <!-- Caption area -->
-                    <rect x="0" y="348" width="520" height="32" fill="rgba(26,20,10,0.08)" rx="0"/>
-                    <text x="260" y="368" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" fill="#5A5040" letter-spacing="1">毎日欠かさず続いた、父の手による入浴介助</text>
-                </svg>
+        <!-- 上部の2枚の写真（夜景・露天風呂） -->
+        <div class="story-photos fade-in">
+            <div class="story-photo story-photo-1">
+                <img loading="lazy" decoding="async" src="story_yakei.jpg" alt="稲佐山から望む長崎の夜景"
+                    onerror="this.closest('.story-photo').style.display='none'">
             </div>
-
-            <div class="story-text">
-                <div class="story-chapter">Scene 01</div>
-                <h3 class="story-scene-title">60歳後半を迎えたころのお話し</h3>
-                <div class="story-body">
-                    <p>重度の障がいをもつ息子を育てておよそ40年が過ぎていた 毎朝息子を車椅子から抱き上げ浴槽へ入れる それが変わらぬ日常だった</p>
-                    <p>「この子が気持ちよさそうにしている顔を見ると疲れなんて吹き飛ぶんです」 父は年齢を重ねても その言葉を変えなかった</p>
-                    <p>しかし父は60代後半になった 限界は近づいていた 医者から膝の手術を勧められた</p>
-                    <p class="story-highlight">「…できません 手術したら しばらく息子の入浴介助ができなくなる それができないのは 息子に申し訳ない」</p>
-                </div>
+            <div class="story-photo story-photo-2">
+                <img loading="lazy" decoding="async" src="story_onsen.jpg" alt="露天風呂"
+                    onerror="this.closest('.story-photo').style.display='none'">
             </div>
         </div>
 
-        <!-- Scene 2: Outdoor hot spring + story (reversed layout) -->
-        <div class="story-block story-block-reverse fade-in">
-            <div class="story-illustration">
-                <img loading="lazy" decoding="async" src="nakigao01.png" alt="泣いている感動の場面" style="width:100%;height:auto;border-radius:12px;display:block;object-fit:cover;">
-                <!-- SVG REMOVED - replaced with real photo -->
-                <svg style="display:none" viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Sky background -->
-                    <defs>
-                        <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#B8D8F0;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#D8EEF8;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#7A9A7A;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#5A7A5A;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#C8E0F0;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#A0C8E8;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="520" height="380" fill="url(#skyGrad)" rx="12"/>
+        <!-- 本文 -->
+        <div class="story-message fade-in">
+            <p class="story-lead">「原爆が落ちて、80年目の夏が過ぎました。」</p>
 
-                    <!-- Sun -->
-                    <circle cx="420" cy="55" r="32" fill="#FFD870" opacity="0.9"/>
-                    <circle cx="420" cy="55" r="42" fill="#FFE8A0" opacity="0.3"/>
-                    <!-- Sun rays -->
-                    <line x1="420" y1="8" x2="420" y2="0" stroke="#FFD870" stroke-width="2" opacity="0.5"/>
-                    <line x1="452" y1="23" x2="458" y2="17" stroke="#FFD870" stroke-width="2" opacity="0.5"/>
-                    <line x1="467" y1="55" x2="475" y2="55" stroke="#FFD870" stroke-width="2" opacity="0.5"/>
-                    <line x1="452" y1="87" x2="458" y2="93" stroke="#FFD870" stroke-width="2" opacity="0.5"/>
-                    <line x1="388" y1="23" x2="382" y2="17" stroke="#FFD870" stroke-width="2" opacity="0.5"/>
+            <p class="story-para">私は、長崎市稲佐山にあるスーパー銭湯が好きで、折に触れて訪れています。露天風呂からは長崎の街並みが一望でき、原爆で廃墟となった町も戦後八十年余りを経て力強く復興した姿を見せています。</p>
 
-                    <!-- Mountains in background -->
-                    <path d="M0 180 L80 100 L160 155 L240 85 L320 140 L400 90 L480 130 L520 110 L520 200 L0 200 Z" fill="url(#mountainGrad)" opacity="0.7"/>
-                    <path d="M0 200 L120 145 L200 175 L300 130 L380 165 L460 145 L520 155 L520 220 L0 220 Z" fill="#6A8A6A" opacity="0.8"/>
+            <p class="story-para">その日、いつもと違っていたのは、更衣室に車椅子が置かれ、障がいのある方が来ていたことでした。温泉に浸かり、眼下に広がる街を眺めながら人生を振り返り、すでに他界した両親への感謝を胸にしていたとき、成人しているように見えるお子さんを懸命に抱えた父親が露天風呂に現れました。</p>
 
-                    <!-- Green hillside / garden -->
-                    <ellipse cx="260" cy="265" rx="300" ry="100" fill="#8AAA78" opacity="0.6"/>
+            <p class="story-para">お二人は楽しそうに景色を眺めておられ、私は障がい者支援に関わる仕事をしているにもかかわらず、声をかける勇気が出ず、申し訳ない気持ちになりました。洗い場では、父親が落とさないようにしっかり抱きかかえながら丁寧に体を洗っており、私はただその姿を見守ることしかできませんでした。</p>
 
-                    <!-- Rocks around onsen -->
-                    <ellipse cx="80" cy="258" rx="35" ry="20" fill="#A0957A"/>
-                    <ellipse cx="95" cy="252" rx="28" ry="16" fill="#B8AB90"/>
-                    <ellipse cx="440" cy="258" rx="38" ry="22" fill="#A0957A"/>
-                    <ellipse cx="425" cy="252" rx="30" ry="16" fill="#B8AB90"/>
-                    <ellipse cx="140" cy="270" rx="22" ry="14" fill="#A8A090"/>
-                    <ellipse cx="380" cy="270" rx="24" ry="14" fill="#A8A090"/>
-                    <!-- Small rock details -->
-                    <ellipse cx="75" cy="262" rx="16" ry="10" fill="#C8BBA0"/>
-                    <ellipse cx="455" cy="262" rx="18" ry="11" fill="#C8BBA0"/>
+            <p class="story-para">あの時、何もできなかった私ですが、あの父子の姿は今も深く心に残っています。</p>
 
-                    <!-- Onsen pool -->
-                    <ellipse cx="260" cy="272" rx="175" ry="65" fill="url(#waterGrad)" stroke="#88B8D8" stroke-width="2"/>
-                    <!-- Water inner -->
-                    <ellipse cx="260" cy="272" rx="165" ry="57" fill="#B0D8F0" opacity="0.6"/>
+            <div class="story-divider-dotted"></div>
 
-                    <!-- Hot spring steam -->
-                    <path d="M180 210 Q186 192 180 175 Q174 158 180 142" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.5"/>
-                    <path d="M200 205 Q207 186 200 170 Q193 154 200 138" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
-                    <path d="M260 200 Q267 181 260 165 Q253 149 260 133" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.45"/>
-                    <path d="M320 208 Q327 189 320 173 Q313 157 320 141" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
-                    <path d="M340 212 Q346 193 340 177 Q334 161 340 145" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+            <p class="story-conclusion">障がいがあっても、気兼ねなく温かい湯に浸かり、<br>笑顔で過ごせる居場所を作りたい。<br>この想いが、基金を立ち上げるきっかけとなりました。</p>
 
-                    <!-- Water ripples -->
-                    <path d="M140 268 Q200 258 260 268 Q320 275 380 268" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" fill="none"/>
-                    <path d="M155 278 Q210 270 260 278 Q310 284 365 278" stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none"/>
-
-                    <!-- Son in water - happy, relaxed -->
-                    <ellipse cx="215" cy="248" rx="23" ry="25" fill="#F0C8A8"/>
-                    <!-- Hair -->
-                    <ellipse cx="215" cy="235" rx="23" ry="13" fill="#2A1A0A"/>
-                    <ellipse cx="200" cy="241" rx="9" ry="11" fill="#2A1A0A"/>
-                    <ellipse cx="230" cy="241" rx="9" ry="11" fill="#2A1A0A"/>
-                    <!-- Son's joyful face -->
-                    <ellipse cx="209" cy="250" rx="3" ry="4" fill="#E0B090"/>
-                    <ellipse cx="221" cy="250" rx="3" ry="4" fill="#E0B090"/>
-                    <!-- Big smile -->
-                    <path d="M205 257 Q215 265 225 257" stroke="#B08868" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <!-- Cheek blush -->
-                    <ellipse cx="205" cy="256" rx="5" ry="3" fill="#F0A080" opacity="0.5"/>
-                    <ellipse cx="225" cy="256" rx="5" ry="3" fill="#F0A080" opacity="0.5"/>
-                    <!-- Eyes - open, happy -->
-                    <ellipse cx="208" cy="248" rx="3.5" ry="4" fill="#3A2010"/>
-                    <ellipse cx="222" cy="248" rx="3.5" ry="4" fill="#3A2010"/>
-                    <circle cx="209" cy="247" r="1.2" fill="white"/>
-                    <circle cx="223" cy="247" r="1.2" fill="white"/>
-                    <!-- Shoulders in water -->
-                    <path d="M190 268 Q215 262 240 268" stroke="#F0C8A8" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.7"/>
-
-                    <!-- Care worker / support staff (right side) - young, smiling -->
-                    <ellipse cx="310" cy="250" rx="24" ry="26" fill="#E8C8A8"/>
-                    <!-- Hair - shorter -->
-                    <ellipse cx="310" cy="237" rx="23" ry="12" fill="#4A3020"/>
-                    <ellipse cx="296" cy="243" rx="8" ry="10" fill="#4A3020"/>
-                    <ellipse cx="324" cy="243" rx="8" ry="10" fill="#4A3020"/>
-                    <!-- Staff warm smile -->
-                    <path d="M300 258 Q310 266 320 258" stroke="#B89070" stroke-width="2" fill="none" stroke-linecap="round"/>
-                    <!-- Staff eyes - warm, kind -->
-                    <ellipse cx="303" cy="249" rx="3.5" ry="4" fill="#3A2010"/>
-                    <ellipse cx="317" cy="249" rx="3.5" ry="4" fill="#3A2010"/>
-                    <circle cx="304" cy="248" r="1.2" fill="white"/>
-                    <circle cx="318" cy="248" r="1.2" fill="white"/>
-                    <!-- Cheek marks -->
-                    <ellipse cx="297" cy="257" rx="5" ry="3" fill="#E89070" opacity="0.45"/>
-                    <ellipse cx="323" cy="257" rx="5" ry="3" fill="#E89070" opacity="0.45"/>
-                    <!-- Staff shoulders in water -->
-                    <path d="M285 268 Q310 260 335 268" stroke="#E8C8A8" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.7"/>
-
-                    <!-- Hand gesture - staff and son's hands near each other, connecting -->
-                    <ellipse cx="262" cy="272" rx="12" ry="6" fill="#F0C8A8" opacity="0.8"/>
-                    <ellipse cx="268" cy="275" rx="10" ry="5" fill="#E8C0A0" opacity="0.7"/>
-
-                    <!-- Speech bubble from son -->
-                    <rect x="150" y="185" width="100" height="42" rx="12" fill="white" opacity="0.9"/>
-                    <path d="M215 227 L210 237 L222 227" fill="white" opacity="0.9"/>
-                    <text x="200" y="203" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#5A3A20" font-weight="600">気持ち</text>
-                    <text x="200" y="218" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="11" fill="#5A3A20" font-weight="600">いいなあ…</text>
-
-                    <!-- Cherry blossoms / seasonal flowers on rock -->
-                    <circle cx="92" cy="242" r="4" fill="#FFB8C8" opacity="0.9"/>
-                    <circle cx="100" cy="238" r="3" fill="#FFC8D8" opacity="0.9"/>
-                    <circle cx="84" cy="238" r="3.5" fill="#FFB0C0" opacity="0.9"/>
-                    <circle cx="455" cy="243" r="4" fill="#FFB8C8" opacity="0.9"/>
-                    <circle cx="462" cy="239" r="3" fill="#FFC8D8" opacity="0.9"/>
-                    <!-- Bamboo / green plant accent -->
-                    <path d="M480 160 L480 240" stroke="#5A8A5A" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M480 175 L496 168" stroke="#5A8A5A" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M480 195 L464 188" stroke="#5A8A5A" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M480 215 L496 208" stroke="#5A8A5A" stroke-width="3" stroke-linecap="round"/>
-                    <ellipse cx="500" cy="165" rx="14" ry="9" fill="#6AAA6A" opacity="0.9"/>
-                    <ellipse cx="458" cy="185" rx="14" ry="9" fill="#6AAA6A" opacity="0.9"/>
-
-                    <!-- Ground/grass at bottom -->
-                    <path d="M0 330 Q130 310 260 325 Q390 338 520 318 L520 380 L0 380 Z" fill="#7A9A60" opacity="0.7"/>
-
-                    <!-- Caption -->
-                    <rect x="0" y="348" width="520" height="32" fill="rgba(26,20,10,0.1)" rx="0"/>
-                    <text x="260" y="368" text-anchor="middle" font-family="'Noto Serif JP', serif" font-size="13" fill="#4A4030" letter-spacing="1">施設の屋外温泉で、笑顔があふれた日</text>
-                </svg>
-            </div>
-
-            <div class="story-text">
-                <div class="story-chapter">Scene 02</div>
-                <h3 class="story-scene-title">「この施設がなければ どうなっていたか…」</h3>
-                <div class="story-body">
-                    <p>そんな父親が出島福祉村の屋外温泉に息子を連れてきた日のことを職員は今でも鮮明に覚えている</p>
-                    <p>息子は湯船に浸かり秋の青空を見上げながらただ静かに笑っていた その顔を見て父は静かに涙をこぼした</p>
-                    <p class="story-highlight">「この施設がなかったら息子はこんな顔をすることもなかった 私が死んだ後もこういう場所がずっと続いてほしいんです」</p>
-                    <p>父親の言葉は池田理事長の胸に深く刺さった 24年間ずっとずっと同じ言葉を聞き続けてきた 「親亡き後」という誰も引き受けようとしてこなかった問い</p>
-                    <p>その答えを出すためにびわから基金は生まれました</p>
-                </div>
+            <div class="story-signature">
+                <p class="story-sig-org">社会福祉法人 出島福祉村</p>
+                <p class="story-sig-name">理事長　池田 賢一</p>
             </div>
         </div>
 
-        <!-- Closing statement -->
-        <div class="story-closing fade-in">
-            <div class="story-closing-photo">
-                <img loading="lazy" decoding="async"
-                    src="ikeda003.png"
-                    alt="出島福祉村 池田賢一理事長"
-                    onerror="this.style.display='none'"
-                >
-                <div class="story-closing-photo-caption">
-                    <strong>池田 賢一</strong>
-                </div>
-            </div>
-            <p class="story-closing-text">
-                あの父が膝の痛みをこらえながら守り続けた息子の笑顔を 社会全体で引き継いでいきたい
-            </p>
-            <p style="color: rgba(255,255,255,0.55); font-size: 15px; margin-top: 20px; font-family: 'Shippori Mincho', serif;">
-                — 出島福祉村 理事長　池田 賢一
-            </p>
-            <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 44px; font-size: 16px; padding: 18px 48px;">
+        <div style="text-align:center;">
+            <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 8px; font-size: 16px; padding: 18px 48px;">
                 <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                その笑顔を支える、1万人の応援団へ
+                その想いを支える、1万人の応援団へ
             </a>
         </div>
 
@@ -3791,7 +3614,7 @@
                         <span class="timeline-tag">特別会員・賛助会員の募集開始</span>
                         <span class="timeline-tag">GH候補地の選定・調査</span>
                         <span class="timeline-tag">専門家ネットワーク整備</span>
-                        <span class="timeline-tag">第三者監査体制の確立</span>
+                        <span class="timeline-tag">情報ネットワークの構築</span>
                     </div>
                 </div>
             </div>
@@ -3833,13 +3656,6 @@
         </div>
         <div class="trust-grid fade-in">
             <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 40 40" fill="none"><path d="M20 4L4 12V22C4 30.837 11.163 38.5 20 40C28.837 38.5 36 30.837 36 22V12L20 4Z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 20L18 24L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                <div>
-                    <div class="trust-title">第三者監査による透明性</div>
-                    <div class="trust-body">独立した第三者機関が財務・活動内容を定期監査 年次報告として全支援者に公開します 返礼品コストを削減し寄付は事業へ優先投入</div>
-                </div>
-            </div>
-            <div class="trust-item">
                 <svg class="trust-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 14H36" stroke="currentColor" stroke-width="2"/><path d="M12 22H20M12 26H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 <div>
                     <div class="trust-title">24年の支援実績</div>
@@ -3847,10 +3663,10 @@
                 </div>
             </div>
             <div class="trust-item">
-                <svg class="trust-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2" fill="none"/><path d="M20 12V20L26 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <svg class="trust-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="14" r="4" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="14" r="4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="32" r="4" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="32" r="4" stroke="currentColor" stroke-width="2"/><path d="M14.5 18L11 28M25.5 18L29 28M20 26V26M11 17L17 19M29 17L23 19" stroke="currentColor" stroke-width="1.5"/></svg>
                 <div>
-                    <div class="trust-title">余剰金は全て福祉へ再投資</div>
-                    <div class="trust-body">余剰金は奨学金制度・ランドセル寄贈など地域の福祉へ100%再投資 国債等による安定運用でグループホーム展開を加速します</div>
+                    <div class="trust-title">情報ネットワークの構築</div>
+                    <div class="trust-body">専門家の紹介・地域店舗情報・障がい者やご家族間の交流・各種イベント情報など 一つの情報ネットワークで「つながり」と「安心」をお届けします</div>
                 </div>
             </div>
         </div>
@@ -3928,7 +3744,7 @@
                     <li>財産の一部を基金に寄付</li>
                     <li>遺言書作成・相続手続き支援</li>
                     <li>次世代の福祉インフラとして永続</li>
-                    <li>専門の弁護士・税理士が対応</li>
+                    <li>専門家を紹介し情報を発信</li>
                 </ul>
                 <button class="plan-btn plan-btn-outline" onclick="openModal('legacy')">遺贈について相談する</button>
             </div>
@@ -3939,7 +3755,7 @@
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="flex-shrink: 0; opacity: 0.7;"><path d="M20 4L4 12V22C4 30.837 11.163 38.5 20 40C28.837 38.5 36 30.837 36 22V12L20 4Z" stroke="rgba(200,134,10,0.8)" stroke-width="2" fill="rgba(200,134,10,0.08)"/><path d="M14 20L18 24L26 16" stroke="rgba(200,134,10,0.9)" stroke-width="2.5" stroke-linecap="round"/></svg>
             <div>
                 <h4 style="font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px;">圧倒的な透明性をお約束します</h4>
-                <p style="color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.8;">集まった資金は第三者監査人による厳格なチェックを受け用途・活動成果を年次報告として全ての支援者に公開します 返礼品等の経費を極力抑え皆様の想いをダイレクトに現場へ届けます 資金配分：GH整備40% / 情報ネットワーク25% / 運営費25% / 準備金10%</p>
+                <p style="color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.8;">集まった資金は用途・活動成果を年次報告として支援者にご報告します 皆様の想いを現場へ届けます 資金配分：グループホーム40% / 情報ネットワーク20% / 運営費20% / 返礼品20%</p>
             </div>
         </div>
     </div>
@@ -4029,7 +3845,7 @@
                         <label class="radio-item">
                             <input type="radio" name="type" value="info">
                             <div>
-                                <div class="radio-label">まずは資料・活動内容を知りたい</div>
+
                             </div>
                             <span class="radio-desc">情報収集</span>
                         </label>
@@ -4106,7 +3922,7 @@
                     <span class="faq-toggle" aria-hidden="true">+</span>
                 </div>
                 <div class="faq-a">
-                    <p class="faq-a-inner">はい いつでも解約可能です 解約を希望される場合は事務局（担当：川原）までご連絡ください 翌月以降の引き落としを停止いたします 電話：095-844-0338（平日9:00-17:00）</p>
+                    <p class="faq-a-inner">はい いつでも解約可能です 解約を希望される場合は事務局までご連絡ください 翌月以降の引き落としを停止いたします 電話：095-844-0338（平日9:00-17:00）</p>
                 </div>
             </div>
             
@@ -4136,7 +3952,7 @@
                     <span class="faq-toggle" aria-hidden="true">+</span>
                 </div>
                 <div class="faq-a">
-                    <p class="faq-a-inner">修正資金計画ではGH整備40%・情報ネットワーク25%・運営費25%・準備金10%で配分します 返礼品コストを削減し事業への優先投入を徹底 余剰金は奨学金・ランドセル寄贈など地域福祉へ100%再投資します 全使途は第三者監査で確認の上年次報告として全支援者に公開します</p>
+                    <p class="faq-a-inner">グループホーム40%・情報ネットワーク20%・運営費20%・返礼品20%で配分します 基金の拡大・社会情勢に伴い適宜見直しを行います 返礼品には作業施設の製品を選定し障がい者の就労支援も併せて行います</p>
                 </div>
             </div>
             
@@ -4162,7 +3978,7 @@
       "name": "月額寄付はいつでも解約できますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい いつでも解約可能です 解約を希望される場合は事務局（担当：川原）までご連絡ください 電話：095-844-0338（平日9:00-17:00）"
+        "text": "はい いつでも解約可能です 解約を希望される場合は事務局までご連絡ください 電話：095-844-0338（平日9:00-17:00）"
       }
     },
     {
@@ -4186,7 +4002,7 @@
       "name": "寄付金はどのように使われますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GH整備40%・情報ネットワーク25%・運営費25%・準備金10%で配分します 返礼品コストを削減し事業への優先投入を徹底しています"
+        "text": "グループホーム40%・情報ネットワーク20%・運営費20%・返礼品20%で配分します 基金の拡大・社会情勢に伴い適宜見直しを行います 返礼品には作業施設の製品を選定し障がい者の就労支援も併せて行います"
       }
     },
     {
@@ -4194,7 +4010,7 @@
       "name": "びわからネットワークとは何ですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "びわからネットワークは、障がいをもつ方と家族を支える7つの柱（第一の鐘〜第七の鐘）で構成される総合支援プラットフォームです。親なき後の支援体制・コミュニティ・地域連携・相談窓口・情報発信・ネット販売・イベント情報を一体的に提供します。"
+        "text": "びわからネットワークは、障がいをもつ方と家族を支える7つの柱（第一の鐘〜第七の鐘）で構成される総合支援プラットフォームです。親なき後の支援体制・コミュニティ・地域連携・専門家による情報発信・ネット販売・イベント情報を一体的に提供します。"
       }
     },
     {
@@ -4260,7 +4076,7 @@
                     〒852-8106 長崎市岩川町2番3号
                 </div>
                 <div class="footer-tel">095-844-0338</div>
-                <div class="footer-hours">担当：川原（平日 9:00 - 17:00）</div>
+                <div class="footer-hours">平日 9:00 - 17:00</div>
                 <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
                     <a href="https://dejimafukushi.or.jp" style="color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none;" target="_blank" rel="noopener noreferrer">
                         🔗 社会福祉法人 出島福祉村
@@ -4432,7 +4248,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         monthly: '月額寄付（月1,500円〜）',
         once: '単発寄付・法人協賛',
         legacy: '遺贈寄付について相談したい',
-        info: 'まずは資料・活動内容を知りたい'
     };
     const templateParams = {
         from_name:    name,
