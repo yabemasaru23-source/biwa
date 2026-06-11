@@ -448,14 +448,19 @@
         .stat-item {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
         }
 
         .stat-num {
             font-family: 'Shippori Mincho', serif;
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 700;
             color: var(--ink);
             line-height: 1;
+            height: 42px;
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
         }
 
         .stat-num span {
@@ -1558,7 +1563,7 @@
             .btn-primary, .btn-secondary { justify-content: center; width: 100%; padding: 16px 24px; font-size: 16px; }
             .hero-stats { gap: 20px; flex-wrap: wrap; }
             .stat-divider { display: none; }
-            .stat-num { font-size: 32px; }
+            .stat-num { font-size: 30px; height: 34px; }
 
             /* Section inner padding */
             .section-inner { padding: 0 16px; }
@@ -1630,7 +1635,7 @@
         @media (max-width: 480px) {
             .hero-headline { font-size: 38px; }
             .hero-stats { gap: 14px; }
-            .stat-num { font-size: 28px; }
+            .stat-num { font-size: 26px; height: 30px; }
             .ticker-track { animation-duration: 20s; }
             .story-closing-photo { width: 130px; height: 130px; }
             .story-closing-photo img { width: 130px; height: 130px; }
@@ -3082,17 +3087,17 @@
         <div class="hero-stats">
             <div class="stat-item">
                 <div class="stat-num"><span class="counter" data-target="24">0</span><span>年</span></div>
-                <div class="stat-label">支援の実績</div>
+                <div class="stat-label">出島福祉村支援の実績</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <div class="stat-num" style="font-size:clamp(18px,2.4vw,26px);"><span>九州大学</span></div>
+                <div class="stat-num" style="font-size:26px;"><span>九州大学</span></div>
                 <div class="stat-label">産学連携の実績</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <div class="stat-num" style="font-size:clamp(18px,2.4vw,26px);"><span>黄綬褒章</span></div>
-                <div class="stat-label">理事長 受章（2025年）</div>
+                <div class="stat-num" style="font-size:26px;"><span>黄綬褒章</span></div>
+                <div class="stat-label">理事長受章（2025年）<br>出島福祉村支援の実績</div>
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
