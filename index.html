@@ -6,7 +6,7 @@
     
     <!-- SEO Meta Tags -->
     <title>びわから基金｜「親亡き後」の不安を、日本からなくす長崎モデル1万人拡張戦略</title>
-    <meta name="description" content="びわから基金は長崎・出島福祉村が運営する障がい福祉支援の基金です。一級建築士による住まい設計・専門家ネットワーク・農福連携を一体化。親亡き後も安心して暮らせる仕組みを月1,500円から一緒につくりませんか。">
+    <meta name="description" content="びわから基金は長崎・出島福祉村が運営する障がい福祉支援の基金です。街作りのプロ（一級建築士）による住まい設計・情報ネットワーク・農福連携を一体化。親亡き後も安心して暮らせる仕組みを月1,500円から一緒につくりませんか。">
     <meta name="keywords" content="びわから基金,出島福祉村,親亡き後,障がい者支援,グループホーム,長崎,社会福祉,寄付,池田賢一">
     <meta name="author" content="社会福祉法人 出島福祉村">
     <meta name="robots" content="index, follow">
@@ -54,7 +54,7 @@
         "alternateName": ["出島福祉村応援団 びわから基金", "Biwakara Fund"],
         "url": "https://dejimafukushimura.or.jp/biwakara/",
         "logo": "https://dejimafukushimura.or.jp/biwakara/ogp.jpg",
-        "description": "障がいをもつ方の親亡き後問題を解決するため一級建築士・池田賢一理事長が主導する長崎発の福祉基金。グループホーム建設・専門家ネットワーク・農福連携びわジャム事業で生涯の安心を提供。",
+        "description": "障がいをもつ方の親亡き後問題を解決するため一級建築士・池田賢一理事長が主導する長崎発の福祉基金。グループホーム建設・情報ネットワーク・農福連携びわジャム事業で生涯の安心を提供。",
         "foundingDate": "2026",
         "founder": {
           "@type": "Person",
@@ -2973,6 +2973,55 @@
             .story-para { font-size: 14.5px; line-height: 2; }
             .story-conclusion br { display: none; }
         }
+
+        /* ===== MEMBER BENEFITS ===== */
+        .benefits-section {
+            background: #FAFAF7;
+            padding: 100px 24px;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .benefit-card {
+            background: #fff;
+            border: 1.5px solid #E8E0CE;
+            border-radius: 14px;
+            padding: 32px 26px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        .benefit-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--nagasaki-deep);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .benefit-desc {
+            font-size: 13.5px;
+            color: var(--ink-light);
+            line-height: 1.8;
+        }
+        @media (max-width: 800px) {
+            .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .benefits-section { padding: 72px 20px; }
+        }
+        @media (max-width: 500px) {
+            .benefits-grid { grid-template-columns: 1fr; }
+        }
 </style>
 </head>
 <body>
@@ -3016,7 +3065,7 @@
         </h1>
         
         <p class="hero-subline">
-            <strong style="color:var(--biwa-gold);">一級建築士の住まい設計力</strong>と<strong style="color:var(--nagasaki-mid);">専門家ネットワーク</strong>で<br class="hero-br">親亡き後の不安をゼロにする 長崎から全国へ
+            <strong style="color:var(--biwa-gold);">街作りのプロ（一級建築士）</strong>と<strong style="color:var(--nagasaki-mid);">情報ネットワーク</strong>で<br class="hero-br">親亡き後の不安をゼロにする 長崎から全国へ
         </p>
         
         <div class="hero-ctas">
@@ -3133,7 +3182,7 @@
                 <svg class="problem-card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 40V20L24 8L40 20V40H30V28H18V40H8Z" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
                 </svg>
-                <h3 class="problem-card-title">終の棲家がない</h3>
+                <h3 class="problem-card-title">住まいの問題</h3>
                 <p class="problem-card-body">地域のグループホームは圧倒的に不足しています 安心して暮らせる環境が確保されておらず入居待ちが何年もかかるケースも珍しくありません</p>
                 <span class="problem-card-accent">→ 住まいの問題</span>
             </div>
@@ -3182,7 +3231,7 @@
             <span class="section-label">OUR SOLUTION</span>
             <h2 class="section-title" id="solution-heading">安心を創る 「長崎モデル」の3本柱</h2>
             <div class="section-divider"></div>
-            <p class="section-body">びわから基金は「住まい」「専門家支援」「つながり」の三位一体で障がいをもつ方の生涯にわたる安心インフラを構築します</p>
+            <p class="section-body">びわから基金は「住まい」「情報」「つながり」の三位一体で障がいをもつ方の生涯にわたる安心インフラを構築します</p>
         </div>
         
         <div class="model-grid">
@@ -3199,13 +3248,13 @@
             </div>
             <div class="model-card fade-in">
                 <div class="model-num">02</div>
-                <h3 class="model-title">専門家ネットワーク<br><small style="font-size: 0.65em; color: var(--ink-light); font-weight: 500;">びわからNETWORK</small></h3>
-                <p class="model-body">専門家の紹介・地域情報・交流・イベント情報を発信する情報ネットワーク 出島福祉村が窓口となりご家族のあらゆる悩みに寄り添います</p>
+                <h3 class="model-title">情報ネットワーク<br><small style="font-size: 0.65em; color: var(--ink-light); font-weight: 500;">びわからNETWORK</small></h3>
+                <p class="model-body">地域のコミュニティ作りや参加、専門家によるアドバイスなど一つの情報ネットワークを活用し対応していきます。</p>
                 <ul class="model-list">
-                    <li>法的支援・資産管理の安心体制</li>
-                    <li>相続・後見制度の専門サポート</li>
-                    <li>医療・介護の継続コーディネーション</li>
-                    <li>オンライン相談サロンで情報共有</li>
+                    <li>専門家による情報発信</li>
+                    <li>地域店舗の情報</li>
+                    <li>障がい者及びご家族間の交流</li>
+                    <li>イベント情報</li>
                 </ul>
             </div>
             <div class="model-card fade-in">
@@ -3220,39 +3269,6 @@
                 </ul>
             </div>
         </div>
-
-            <!-- 差別化バナー -->
-            <div class="diff-banner fade-in">
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 40 40" fill="none"><path d="M8 34V18L20 8L32 18V34H24V24H16V34H8Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div>
-                        <div class="diff-title">一級建築士の住まい専門性</div>
-                        <div class="diff-body">理事長・池田賢一は一級建築士 お子様の成長や状態に合わせた住まいを設計・提案できるのは建築と福祉 両方を知る私たちだけです</div>
-                    </div>
-                </div>
-                <div class="diff-divider"></div>
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M13 20h14M20 13v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                    </div>
-                    <div>
-                        <div class="diff-title">情報ネットワークの構築</div>
-                        <div class="diff-body">法的後見・資産管理・医療まで出島福祉村が窓口を一本化 複数の専門家に個別に相談する必要がありません</div>
-                    </div>
-                </div>
-                <div class="diff-divider"></div>
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <svg viewBox="0 0 40 40" fill="none"><path d="M10 20h20M20 10l10 10-10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div>
-                        <div class="diff-title">返礼品なし・100%事業投資</div>
-                        <div class="diff-body">理念共感型の基金です 返礼品コストを徹底削減し集まった支援をすべてGH建設と専門家ネットワークに投入します</div>
-                    </div>
-                </div>
-            </div>
 
     </div>
 </section>
@@ -3285,10 +3301,10 @@
                 <div class="diff-point">情報ネットワークで「つながり」と「安心」をお届けします</div>
             </div>
             <div class="diff-card fade-in">
-                <div class="diff-icon">💼</div>
-                <h3 class="diff-title">グループホームに住むことが「働く場所」につながる</h3>
-                <p class="diff-body">出島福祉村のグループホームに入居した方は びわ農園・加工場での仕事に参加できます 「かわいそうだから」ではなく 誇りをもって働き 収入を得る ── それが本人の生きがいになります<br><br>長崎びわジャム・びわ茶は九州大学との産学連携で品質を科学的に証明した本物のブランドです ノウフクアワード2022優秀賞を受賞した「本物の商品」です</p>
-                <div class="diff-point">🏆 ノウフクアワード2022優秀賞受賞 ── 誇りをもって働ける農福連携</div>
+                <div class="diff-icon">🏠</div>
+                <h3 class="diff-title">グループホーム ── 3つのタイプ</h3>
+                <p class="diff-body"><strong style="color:#1A3A2A;">年代別のホーム</strong><br>青年期・壮年期・高齢期といったライフステージに合わせた暮らしを築けます<br><br><strong style="color:#1A3A2A;">障がい別のホーム</strong><br>身体・知的・精神などの障がいの特性に合わせた支援体制を備え、専門的なサポートが受けられます<br><br><strong style="color:#1A3A2A;">親子同居可能なホーム</strong><br>親子が同じ屋根の下で暮らせるホーム。「そばで暮らしたい」というご家族の願いに応えます</p>
+                <div class="diff-point">🏠 一人ひとりに合わせた3つの住まいのかたち</div>
             </div>
         </div>
     </div>
@@ -3584,13 +3600,29 @@
             </div>
         </div>
 
-        <div style="text-align:center;">
-            <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 8px; font-size: 16px; padding: 18px 48px;">
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                その想いを支える、1万人の応援団へ
-            </a>
-        </div>
+    </div>
 
+    <!-- 膝の痛み 締めメッセージ（緑背景） -->
+    <div class="story-closing fade-in">
+        <div class="story-closing-photo">
+            <img loading="lazy" decoding="async"
+                src="ikeda003.png"
+                alt="出島福祉村 池田賢一理事長"
+                onerror="this.style.display='none'">
+            <div class="story-closing-photo-caption">
+                <strong>池田 賢一</strong>
+            </div>
+        </div>
+        <p class="story-closing-text">
+            あの父が膝の痛みをこらえながら守り続けた息子の笑顔を 社会全体で引き継いでいきたい
+        </p>
+        <p style="color: rgba(255,255,255,0.55); font-size: 15px; margin-top: 20px; font-family: 'Shippori Mincho', serif;">
+            — 出島福祉村 理事長　池田 賢一
+        </p>
+        <a href="#join" class="btn-primary" style="display: inline-flex; margin-top: 44px; font-size: 16px; padding: 18px 48px;">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            その笑顔を支える、1万人の応援団へ
+        </a>
     </div>
 </section>
 
@@ -3613,7 +3645,6 @@
                     <div class="timeline-items">
                         <span class="timeline-tag">特別会員・賛助会員の募集開始</span>
                         <span class="timeline-tag">GH候補地の選定・調査</span>
-                        <span class="timeline-tag">専門家ネットワーク整備</span>
                         <span class="timeline-tag">情報ネットワークの構築</span>
                     </div>
                 </div>
@@ -3737,7 +3768,7 @@
                 <div class="plan-amount">
                     <div class="plan-amount-from">&nbsp;</div>
                     <div>
-                        <span class="plan-amount-num" style="font-size: 24px; line-height: 1.4;">専門家ネットワーク<br>がサポートします</span>
+                        <span class="plan-amount-num" style="font-size: 24px; line-height: 1.4;">情報ネットワーク<br>がサポートします</span>
                     </div>
                 </div>
                 <ul class="plan-features">
@@ -3750,12 +3781,78 @@
             </div>
         </div>
         
-        <!-- Transparency box -->
-        <div class="fade-in" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 40px 48px; border-radius: 4px; display: flex; gap: 28px; align-items: flex-start;">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="flex-shrink: 0; opacity: 0.7;"><path d="M20 4L4 12V22C4 30.837 11.163 38.5 20 40C28.837 38.5 36 30.837 36 22V12L20 4Z" stroke="rgba(200,134,10,0.8)" stroke-width="2" fill="rgba(200,134,10,0.08)"/><path d="M14 20L18 24L26 16" stroke="rgba(200,134,10,0.9)" stroke-width="2.5" stroke-linecap="round"/></svg>
-            <div>
-                <h4 style="font-family: 'Shippori Mincho', serif; font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px;">圧倒的な透明性をお約束します</h4>
-                <p style="color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.8;">集まった資金は用途・活動成果を年次報告として支援者にご報告します 皆様の想いを現場へ届けます 資金配分：グループホーム40% / 情報ネットワーク20% / 運営費20% / 返礼品20%</p>
+        <!-- 寄附金 用途の割合 -->
+        <div class="fade-in" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 40px 48px; border-radius: 8px;">
+            <h4 style="font-family: 'Shippori Mincho', serif; font-size: 22px; font-weight: 700; color: white; margin-bottom: 24px; text-align:center;">寄附金　用途の割合</h4>
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:28px;">
+                <div style="text-align:center; padding:20px 12px; background:rgba(200,134,10,0.14); border-radius:8px;">
+                    <div style="font-size:32px; font-weight:800; color:var(--biwa-warm); line-height:1;">40<span style="font-size:18px;">%</span></div>
+                    <div style="color:rgba(255,255,255,0.85); font-size:13px; margin-top:8px; font-weight:600;">グループホーム</div>
+                </div>
+                <div style="text-align:center; padding:20px 12px; background:rgba(255,255,255,0.05); border-radius:8px;">
+                    <div style="font-size:32px; font-weight:800; color:#7AAD8A; line-height:1;">20<span style="font-size:18px;">%</span></div>
+                    <div style="color:rgba(255,255,255,0.85); font-size:13px; margin-top:8px; font-weight:600;">情報ネットワーク</div>
+                </div>
+                <div style="text-align:center; padding:20px 12px; background:rgba(255,255,255,0.05); border-radius:8px;">
+                    <div style="font-size:32px; font-weight:800; color:rgba(255,255,255,0.8); line-height:1;">20<span style="font-size:18px;">%</span></div>
+                    <div style="color:rgba(255,255,255,0.85); font-size:13px; margin-top:8px; font-weight:600;">運営費</div>
+                </div>
+                <div style="text-align:center; padding:20px 12px; background:rgba(255,255,255,0.05); border-radius:8px;">
+                    <div style="font-size:32px; font-weight:800; color:rgba(255,255,255,0.8); line-height:1;">20<span style="font-size:18px;">%</span></div>
+                    <div style="color:rgba(255,255,255,0.85); font-size:13px; margin-top:8px; font-weight:600;">返礼品</div>
+                </div>
+            </div>
+            <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
+                <li style="color:rgba(255,255,255,0.7); font-size:13.5px; line-height:1.7; padding-left:20px; position:relative;">
+                    <span style="position:absolute; left:0; color:var(--biwa-warm);">※</span>基金の拡大、社会情勢に伴い、適宜、使用用途別割合の見直しを行います。
+                </li>
+                <li style="color:rgba(255,255,255,0.7); font-size:13.5px; line-height:1.7; padding-left:20px; position:relative;">
+                    <span style="position:absolute; left:0; color:var(--biwa-warm);">※</span>返礼品には作業施設の製品を選定し、障がい者の就労支援を併せて行っていきます。
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MEMBER BENEFITS ===== -->
+<section class="benefits-section" aria-labelledby="benefits-heading">
+    <div class="section-inner" style="max-width: 920px;">
+        <div class="fade-in" style="text-align:center; margin-bottom:48px;">
+            <span class="section-label">MEMBER BENEFITS</span>
+            <h2 class="section-title" id="benefits-heading" style="font-size:clamp(24px,3.5vw,38px);">会員になることのメリット</h2>
+            <div class="section-divider" style="margin:16px auto;"></div>
+            <p class="section-body">ご賛同いただいた会員の皆様には、びわから基金ならではの<br>特別なつながりと情報をお届けします</p>
+        </div>
+        <div class="benefits-grid fade-in">
+            <div class="benefit-card">
+                <div class="benefit-icon">🔗</div>
+                <h3 class="benefit-title">情報ネットワークの利用</h3>
+                <p class="benefit-desc">専門家の紹介や各種情報が利用できる情報ネットワークは会員限定でご利用いただけます</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📰</div>
+                <h3 class="benefit-title">月1回の会報発信</h3>
+                <p class="benefit-desc">基金の活動報告や最新情報を月1回、会報としてお届けします</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏪</div>
+                <h3 class="benefit-title">提携店のご紹介</h3>
+                <p class="benefit-desc">出島福祉村が連携する提携店・地域店舗の情報をご紹介します</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎉</div>
+                <h3 class="benefit-title">イベント情報</h3>
+                <p class="benefit-desc">出島福祉村主催のイベント情報をいち早くお届けします</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🏛️</div>
+                <h3 class="benefit-title">組織情報の公開</h3>
+                <p class="benefit-desc">基金を運営する組織体制について透明性をもって公開します</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3 class="benefit-title">事業計画・報告・決算報告</h3>
+                <p class="benefit-desc">事業計画、活動報告、決算報告などを会員の皆様にご報告します</p>
             </div>
         </div>
     </div>
@@ -3841,13 +3938,6 @@
                                 <div class="radio-label">遺贈寄付について相談したい</div>
                             </div>
                             <span class="radio-desc">未来への贈り物</span>
-                        </label>
-                        <label class="radio-item">
-                            <input type="radio" name="type" value="info">
-                            <div>
-
-                            </div>
-                            <span class="radio-desc">情報収集</span>
                         </label>
                     </div>
                 </div>
