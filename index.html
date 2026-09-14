@@ -1328,6 +1328,103 @@
             background: white;
         }
 
+        /* ===== SNS（フォロー導線） ===== */
+        .sns-section {
+            background: var(--cream);
+            border-top: 1px solid var(--cream-deep);
+        }
+        .sns-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sns-section .section-title,
+        .sns-lead,
+        .sns-note { overflow-wrap: anywhere; }
+        .sns-lead {
+            color: var(--ink-light);
+            font-size: 16px;
+            line-height: 2;
+            margin: 18px auto 32px;
+            max-width: 40em;
+        }
+        .sns-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .sns-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 13px;
+            padding: 16px 30px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--ivory);
+            background: var(--ink);
+            box-shadow: 0 4px 14px rgba(28, 26, 20, 0.16);
+            transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+        }
+        .sns-btn:hover,
+        .sns-btn:focus-visible {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 26px rgba(28, 26, 20, 0.24);
+        }
+        .sns-btn--ig {
+            background: linear-gradient(120deg, #F09433, #E6683C 28%, #DC2743 55%, #CC2366 78%, #BC1888);
+        }
+        .sns-btn svg { flex: none; }
+        .sns-btn .handle {
+            font-size: 13px;
+            font-weight: 500;
+            opacity: .78;
+            display: block;
+            margin-top: 1px;
+        }
+        .sns-btn .label { display: block; text-align: left; line-height: 1.25; }
+        .sns-note {
+            margin-top: 26px;
+            font-size: 13.5px;
+            color: var(--ink-light);
+            line-height: 1.9;
+        }
+        /* フッターの FOLLOW 欄 */
+        .footer-sns {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+        .footer-sns a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            color: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            transition: color .18s ease, border-color .18s ease, background .18s ease;
+        }
+        .footer-sns a:hover,
+        .footer-sns a:focus-visible {
+            color: var(--ink);
+            background: var(--biwa-warm);
+            border-color: var(--biwa-warm);
+        }
+        @media (max-width: 600px) {
+            .sns-buttons { flex-direction: column; align-items: stretch; }
+            .sns-btn { justify-content: center; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .sns-btn { transition: none; }
+            .sns-btn:hover { transform: none; }
+        }
+
+
         .faq-list {
             max-width: 800px;
             margin-top: 60px;
@@ -3050,6 +3147,7 @@
             <a href="#network">ネットワーク</a>
             <a href="#founder">理事長の想い</a>
             <a href="#join">会員登録</a>
+            <a href="#sns">SNS</a>
             <a href="#join" class="nav-cta">今すぐ賛同する</a>
         </nav>
     </div>
@@ -4145,6 +4243,34 @@
 }
 </script>
 
+
+<!-- ===== SNS ===== -->
+<section class="sns-section" id="sns" aria-labelledby="sns-heading">
+    <div class="section-inner">
+        <div class="sns-inner fade-in">
+            <span class="section-label">FOLLOW US</span>
+            <h2 class="section-title" id="sns-heading" style="font-size:clamp(24px,3.5vw,42px);">日々の活動をお伝えしています</h2>
+            <div class="section-divider" style="margin:16px auto;"></div>
+            <p class="sns-lead">
+                びわ茶づくりの現場、預かっている畑のこと、グループホームの進み具合。
+                長崎で起きていることを、そのままお届けしています。
+                寄付の前に、まずは見ていただくだけでも構いません。
+            </p>
+            <div class="sns-buttons">
+                <a class="sns-btn" href="https://x.com/biwakara_fund" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="label">Xでフォロー<span class="handle">@biwakara_fund</span></span>
+                </a>
+                <a class="sns-btn sns-btn--ig" href="https://www.instagram.com/biwakara_fund/" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg><span class="label">Instagramでフォロー<span class="handle">@biwakara_fund</span></span>
+                </a>
+            </div>
+            <p class="sns-note">
+                アカウント名はどちらも「みんなのびわから基金」です。
+            </p>
+        </div>
+    </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer>
     <div class="footer-inner">
@@ -4175,6 +4301,7 @@
                     <li><a href="#roadmap">ロードマップ</a></li>
                     <li><a href="#donate">寄付プラン</a></li>
                     <li><a href="#join">お申込み・お問い合わせ</a></li>
+                    <li><a href="#sns">SNSで活動を見る</a></li>
                 </ul>
             </div>
             
@@ -4193,6 +4320,11 @@
                     <a href="https://dejimafukushi.or.jp" style="color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none;" target="_blank" rel="noopener noreferrer">
                         🔗 社会福祉法人 出島福祉村
                     </a>
+                </div>
+                <div class="footer-col-title" style="margin-top:22px;">FOLLOW</div>
+                <div class="footer-sns">
+                    <a href="https://x.com/biwakara_fund" target="_blank" rel="noopener noreferrer" aria-label="Xでみんなのびわから基金をフォロー"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="https://www.instagram.com/biwakara_fund/" target="_blank" rel="noopener noreferrer" aria-label="Instagramでみんなのびわから基金をフォロー"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
                 </div>
             </div>
         </div>
